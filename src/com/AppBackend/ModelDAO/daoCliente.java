@@ -1,14 +1,13 @@
 package com.AppBackend.ModelDAO;
-import com.tpFinal.Cliente;
+import com.AppBackend.Domain.Cliente;
+import java.util.*;
 
 public interface daoCliente {
 	
-	public void addcliente();
-	
-	    public void addUsuario(Cliente cliente);
-	    public Cliente updateUsuario(Cliente usuario, String dniUsuario);
-	    public void deleteUsuario(String dni);
-	    public List<Cliente> findAll();
-	    public Cliente getUsuario(String dni) throws NoSuchUserException;
+	    public void addCliente(Cliente cliente);
+	    public Cliente updateCliente(Cliente usuario, String dniUsuario);
+	    public void deleteCliente(String dni);
+	    public List<Cliente> findAllCliente();
+	    public Cliente getCliente(String dni); /*throws NoSuchUserException*/
 
 }

@@ -1,5 +1,7 @@
 package com.AppBackend.ModelDAO;
 
-public class testDAO {
+public interface daoLineaAerea {
+	
+	
 
 }
