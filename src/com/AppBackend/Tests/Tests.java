@@ -1,6 +1,6 @@
-package com.AppVuelos.mvc.main;
+package com.AppBackend.Tests;
 
-public class Main {
+public class Tests {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
