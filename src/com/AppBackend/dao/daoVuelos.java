@@ -1,6 +1,7 @@
-package com.AppBackend.ModelDAO;
+package com.AppBackend.dao;
 import java.util.List;
-import com.AppBackend.Domain.Vuelo;
+
+import com.AppBackend.domain.Vuelo;
 
 public interface daoVuelos {
 	

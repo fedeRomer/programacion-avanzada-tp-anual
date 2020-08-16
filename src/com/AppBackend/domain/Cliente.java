@@ -1,7 +1,7 @@
 /**
  * Generated on Sat May 30 20:45:04 UTC 2020 by ObjGen 3.0
  */
-package com.AppBackend.Domain;
+package com.AppBackend.domain;
 
 import java.util.Date;
 

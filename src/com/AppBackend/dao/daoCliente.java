@@ -1,6 +1,7 @@
-package com.AppBackend.ModelDAO;
-import com.AppBackend.Domain.Cliente;
+package com.AppBackend.dao;
 import java.util.*;
+
+import com.AppBackend.domain.Cliente;
 
 public interface daoCliente {
 	

@@ -1,4 +1,4 @@
-package com.AppBackend.Tests;
+package com.AppBackend.tests;
 
 public class Tests {
 

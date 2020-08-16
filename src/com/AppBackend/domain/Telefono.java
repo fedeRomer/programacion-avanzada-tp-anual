@@ -1,7 +1,7 @@
 /**
  * Generated on Sat May 30 21:05:09 UTC 2020 by ObjGen 3.0
  */
-package com.AppBackend.Domain;
+package com.AppBackend.domain;
 
 /**
  *

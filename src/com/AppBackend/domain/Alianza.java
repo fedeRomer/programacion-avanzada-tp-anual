@@ -1,4 +1,4 @@
-package com.AppBackend.Domain;
+package com.AppBackend.domain;
 
 public enum Alianza {
     ALIANZA1("Oneworld"),

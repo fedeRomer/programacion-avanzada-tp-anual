@@ -1,6 +1,7 @@
-package com.AppBackend.ModelDAO;
+package com.AppBackend.dao;
 import java.util.List;
-import com.AppBackend.Domain.Venta;
+
+import com.AppBackend.domain.Venta;
 
 public interface daoVentas {
 	

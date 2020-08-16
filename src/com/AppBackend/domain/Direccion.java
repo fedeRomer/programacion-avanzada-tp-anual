@@ -4,7 +4,7 @@ revisar provincias
 /**
  * Generated on Sat May 30 21:02:35 UTC 2020 by ObjGen 3.0
  */
-package com.AppBackend.Domain;
+package com.AppBackend.domain;
 
 /**
  *
