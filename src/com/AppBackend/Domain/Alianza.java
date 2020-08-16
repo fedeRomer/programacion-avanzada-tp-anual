@@ -1,3 +1,5 @@
+package com.AppBackend.Domain;
+
 public enum Alianza {
     ALIANZA1("Oneworld"),
     ALIANZA2("SkyTeam"),

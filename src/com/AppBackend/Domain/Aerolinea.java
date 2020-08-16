@@ -3,6 +3,8 @@
  */
 package com.AppBackend.Domain;
 
+import java.util.Objects;
+
 /**
  *
  */
@@ -12,7 +14,7 @@ public class Aerolinea {
    String Nombre;
 
    /** Property Vuelos */
-   Objecto Vuelos = new Vuelos();
+   Object Vuelos = new Object();
 
    /**
     * Gets the Nombre
@@ -31,14 +33,14 @@ public class Aerolinea {
    /**
     * Gets the Vuelos
     */
-   public Objecto getVuelos() {
+   public Object getVuelos() {
       return this.Vuelos;
    }
 
    /**
     * Sets the Vuelos
     */
-   public void setVuelos(Objecto value) {
-      this.Vuelos = value;
+   public void setVuelos(Object value) {
+      this.Vuelos = (Object) value;
    }
 }

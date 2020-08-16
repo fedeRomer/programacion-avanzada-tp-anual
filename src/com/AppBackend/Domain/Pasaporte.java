@@ -3,16 +3,18 @@
  */
 package com.AppBackend.Domain;
 
+import java.util.Date;
+
 /**
  *
  */
 public class Pasaporte {
  
    /** Property idPasaporte */
-   Int idPasaporte;
+   int idPasaporte;
 
    /** Property codigoPasaporte */
-   Int codigoPasaporte;
+   int codigoPasaporte;
 
    /** Property Pais */
    String Pais;
@@ -29,28 +31,28 @@ public class Pasaporte {
    /**
     * Gets the idPasaporte
     */
-   public Int getIdPasaporte() {
+   public int getIdPasaporte() {
       return this.idPasaporte;
    }
 
    /**
     * Sets the idPasaporte
     */
-   public void setIdPasaporte(Int value) {
+   public void setIdPasaporte(int value) {
       this.idPasaporte = value;
    }
 
    /**
     * Gets the codigoPasaporte
     */
-   public Int getCodigoPasaporte() {
+   public int getCodigoPasaporte() {
       return this.codigoPasaporte;
    }
 
    /**
     * Sets the codigoPasaporte
     */
-   public void setCodigoPasaporte(Int value) {
+   public void setCodigoPasaporte(int value) {
       this.codigoPasaporte = value;
    }
 

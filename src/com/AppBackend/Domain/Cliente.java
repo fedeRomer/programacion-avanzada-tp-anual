@@ -3,6 +3,8 @@
  */
 package com.AppBackend.Domain;
 
+import java.util.Date;
+
 /**
  *
  */
