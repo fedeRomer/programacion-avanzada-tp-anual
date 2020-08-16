@@ -1,4 +1,4 @@
-package com.AppVuelos.Main;
+package com.AppVuelos.mvc.main;
 
 public class Main {
 
