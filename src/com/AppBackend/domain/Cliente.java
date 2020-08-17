@@ -1,19 +1,9 @@
-/**
- * Generated on Sat May 30 20:45:04 UTC 2020 by ObjGen 3.0
- */
 package com.AppBackend.domain;
 
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- *
- */
 public class Cliente implements Serializable {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1381326742965240694L;
 
 	int idCliente;

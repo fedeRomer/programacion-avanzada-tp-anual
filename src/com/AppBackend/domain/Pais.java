@@ -1,26 +1,48 @@
 package com.AppBackend.domain;
 
-/**
- *
- */
-public class Pais {
+import java.io.Serializable;
 
-   String nombre;
+public class Pais implements Serializable {
 
-   String provincia;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3469414203813841773L;
 
-   public String getNombre() {
-      return this.nombre;
-   }
+	String nombre;
 
-   public void setNombre(String value) {
-      this.nombre = value;
-   }
-   public String getProvincia() {
-      return this.provincia;
-   }
+	String provincia;
 
-   public void setProvincia(String value) {
-      this.provincia = value;
-   }
+	public Pais(String nombre, String provincia) {
+		super();
+		this.nombre = nombre;
+		this.provincia = provincia;
+	}
+	
+	public Pais() {
+		super();
+	}
+
+	public String getNombre() {
+		return this.nombre;
+	}
+
+	public void setNombre(String value) {
+		this.nombre = value;
+	}
+
+	public String getProvincia() {
+		return this.provincia;
+	}
+
+	public void setProvincia(String value) {
+		this.provincia = value;
+	}
+
+	@Override
+	public String toString() {
+		return "Pais [nombre=" + nombre + ", provincia=" + provincia + "]";
+	}
+	
+	
 }

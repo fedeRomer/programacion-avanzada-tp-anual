@@ -1,6 +1,3 @@
-/**
- * Generated on Sat May 30 21:27:36 UTC 2020 by ObjGen 3.0
- */
 package com.AppBackend.domain;
 
 import java.io.Serializable;
