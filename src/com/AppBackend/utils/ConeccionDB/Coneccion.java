@@ -10,7 +10,7 @@ import java.util.Properties;
 import com.sun.jdi.connect.spi.Connection;
 
 public class Coneccion {
-
+//test3
 	public Connection getConnection() {
 		
 		try {
