@@ -1,4 +1,4 @@
-package com.AppBackend.Exceptions;
+package com.AppBackend.exceptions;
 
 import java.io.IOException;
 

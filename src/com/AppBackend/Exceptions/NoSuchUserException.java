@@ -1,7 +1,6 @@
-package com.AppBackend.Exceptions;
+package com.AppBackend.exceptions;
 
 import java.io.IOException;
-import java.io.Serializable;
 
 public class NoSuchUserException extends IOException {
     /**
