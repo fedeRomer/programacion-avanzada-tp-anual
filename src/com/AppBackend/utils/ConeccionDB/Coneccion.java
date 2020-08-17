@@ -1,13 +1,11 @@
 package com.AppBackend.utils.ConeccionDB;
-
+import java.sql.*;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
-
-import com.sun.jdi.connect.spi.Connection;
 
 public class Coneccion {
 //test3
@@ -18,9 +16,9 @@ public class Coneccion {
 			FileInputStream ingreso = new FileInputStream("src/util/coneccion.properties");	
 		    properties1.load(ingreso);
 			Class.forName(properties1.getProperty("db.driver"));
-			Connection coneccion1 = (Connection) DriverManager.getConnection(properties1.getProperty("db.url"),properties1.getProperty("db.user"),properties1.getProperty("db.password"));
+			Connection coneccion1 = DriverManager.getConnection(properties1.getProperty("db.url"),properties1.getProperty("db.user"),properties1.getProperty("db.password"));
 	        	 
-			if(!((java.sql.Connection) coneccion1).isClosed()) {
+			if(!coneccion1.isClosed()) {
 				System.out.println("coneccion realizada con exito a la base de datos");
 			}
 			return coneccion1;
