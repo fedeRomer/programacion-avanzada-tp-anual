@@ -1,4 +1,9 @@
+
 package com.AppBackend.Domain;
+
+
+package com.AppBackend.domain;
+
 
 import java.io.Serializable;
 
@@ -27,7 +32,7 @@ public class Direccion implements Serializable {
 		this.pais = pais;
 		this.codigoPostal = codigoPostal;
 	}
-	
+
 	public Direccion() {
 		super();
 	}
@@ -85,6 +90,6 @@ public class Direccion implements Serializable {
 		return "Direccion [calle=" + calle + ", altura=" + altura + ", provincia=" + provincia + ", ciudad=" + ciudad
 				+ ", pais=" + pais + ", codigoPostal=" + codigoPostal + "]";
 	}
-	
-	
+
+
 }
