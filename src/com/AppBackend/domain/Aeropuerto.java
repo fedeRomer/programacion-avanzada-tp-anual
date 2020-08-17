@@ -3,112 +3,94 @@
  */
 package com.AppBackend.domain;
 
+import java.io.Serializable;
 import java.util.Date;
 
-/**
- *
- */
-public class Aeropuerto {
+public class Aeropuerto implements Serializable {
 
-   /** Property identificacion */
-   String identificacion;
+	private static final long serialVersionUID = 4489416593723971011L;
 
-   /** Property ciudad */
-   String ciudad;
+	String identificacion;
 
-   /** Property provincia */
-   String provincia;
+	String ciudad;
 
-   /** Property pais */
-   String pais;
+	String provincia;
 
-   /** Property horaSalida */
-   Date horaSalida;
+	String pais;
 
-   /** Property horaLlegada */
-   Date horaLlegada;
+	Date horaSalida;
 
-   /**
-    * Gets the identificacion
-    */
-   public String getIdentificacion() {
-      return this.identificacion;
-   }
+	Date horaLlegada;
+	
+	
 
-   /**
-    * Sets the identificacion
-    */
-   public void setIdentificacion(String value) {
-      this.identificacion = value;
-   }
+	public Aeropuerto(String identificacion, String ciudad, String provincia, String pais, Date horaSalida,
+			Date horaLlegada) {
+		super();
+		this.identificacion = identificacion;
+		this.ciudad = ciudad;
+		this.provincia = provincia;
+		this.pais = pais;
+		this.horaSalida = horaSalida;
+		this.horaLlegada = horaLlegada;
+	}
+	
+	public Aeropuerto() {
+		super();
+	}
 
-   /**
-    * Gets the ciudad
-    */
-   public String getCiudad() {
-      return this.ciudad;
-   }
+	public String getIdentificacion() {
+		return this.identificacion;
+	}
 
-   /**
-    * Sets the ciudad
-    */
-   public void setCiudad(String value) {
-      this.ciudad = value;
-   }
+	public void setIdentificacion(String value) {
+		this.identificacion = value;
+	}
 
-   /**
-    * Gets the provincia
-    */
-   public String getProvincia() {
-      return this.provincia;
-   }
+	public String getCiudad() {
+		return this.ciudad;
+	}
 
-   /**
-    * Sets the provincia
-    */
-   public void setProvincia(String value) {
-      this.provincia = value;
-   }
+	public void setCiudad(String value) {
+		this.ciudad = value;
+	}
 
-   /**
-    * Gets the pais
-    */
-   public String getPais() {
-      return this.pais;
-   }
+	public String getProvincia() {
+		return this.provincia;
+	}
 
-   /**
-    * Sets the pais
-    */
-   public void setPais(String value) {
-      this.pais = value;
-   }
+	public void setProvincia(String value) {
+		this.provincia = value;
+	}
 
-   /**
-    * Gets the horaSalida
-    */
-   public Date getHoraSalida() {
-      return this.horaSalida;
-   }
+	public String getPais() {
+		return this.pais;
+	}
 
-   /**
-    * Sets the horaSalida
-    */
-   public void setHoraSalida(Date value) {
-      this.horaSalida = value;
-   }
+	public void setPais(String value) {
+		this.pais = value;
+	}
 
-   /**
-    * Gets the horaLlegada
-    */
-   public Date getHoraLlegada() {
-      return this.horaLlegada;
-   }
+	public Date getHoraSalida() {
+		return this.horaSalida;
+	}
 
-   /**
-    * Sets the horaLlegada
-    */
-   public void setHoraLlegada(Date value) {
-      this.horaLlegada = value;
-   }
+	public void setHoraSalida(Date value) {
+		this.horaSalida = value;
+	}
+
+	public Date getHoraLlegada() {
+		return this.horaLlegada;
+	}
+
+	public void setHoraLlegada(Date value) {
+		this.horaLlegada = value;
+	}
+
+	@Override
+	public String toString() {
+		return "Aeropuerto [identificacion=" + identificacion + ", ciudad=" + ciudad + ", provincia=" + provincia
+				+ ", pais=" + pais + ", horaSalida=" + horaSalida + ", horaLlegada=" + horaLlegada + "]";
+	}
+	
 }

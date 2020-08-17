@@ -1,115 +1,95 @@
-/*
-revisar provincias
-*/
-/**
- * Generated on Sat May 30 21:02:35 UTC 2020 by ObjGen 3.0
- */
+
+package com.AppBackend.Domain;
+
+
 package com.AppBackend.domain;
 
-/**
- *
- */
-public class Direccion {
 
-   /** Property calle */
-   String calle;
+import java.io.Serializable;
 
-   /** Property altura */
-   String altura;
+public class Direccion implements Serializable {
 
-   /** Property provincia */
-   Object provincia;
+	private static final long serialVersionUID = -2802958673228442283L;
 
-   /** Property ciudad */
-   String ciudad;
+	String calle;
 
-   /** Property pais */
-   String pais;
+	String altura;
 
-   /** Property codigoPostal */
-   String codigoPostal;
+	Object provincia;
 
-   /**
-    * Gets the calle
-    */
-   public String getCalle() {
-      return this.calle;
-   }
+	String ciudad;
 
-   /**
-    * Sets the calle
-    */
-   public void setCalle(String value) {
-      this.calle = value;
-   }
+	String pais;
 
-   /**
-    * Gets the altura
-    */
-   public String getAltura() {
-      return this.altura;
-   }
+	String codigoPostal;
 
-   /**
-    * Sets the altura
-    */
-   public void setAltura(String value) {
-      this.altura = value;
-   }
+	public Direccion(String calle, String altura, Object provincia, String ciudad, String pais, String codigoPostal) {
+		super();
+		this.calle = calle;
+		this.altura = altura;
+		this.provincia = provincia;
+		this.ciudad = ciudad;
+		this.pais = pais;
+		this.codigoPostal = codigoPostal;
+	}
 
-   /**
-    * Gets the provincia
-    */
-   public Object getProvincia() {
-      return this.provincia;
-   }
+	public Direccion() {
+		super();
+	}
 
-   /**
-    * Sets the provincia
-    */
-   public void setProvincia(Object value) {
-      this.provincia = value;
-   }
+	public String getCalle() {
+		return this.calle;
+	}
 
-   /**
-    * Gets the ciudad
-    */
-   public String getCiudad() {
-      return this.ciudad;
-   }
+	public void setCalle(String value) {
+		this.calle = value;
+	}
 
-   /**
-    * Sets the ciudad
-    */
-   public void setCiudad(String value) {
-      this.ciudad = value;
-   }
+	public String getAltura() {
+		return this.altura;
+	}
 
-   /**
-    * Gets the pais
-    */
-   public String getPais() {
-      return this.pais;
-   }
+	public void setAltura(String value) {
+		this.altura = value;
+	}
 
-   /**
-    * Sets the pais
-    */
-   public void setPais(String value) {
-      this.pais = value;
-   }
+	public Object getProvincia() {
+		return this.provincia;
+	}
 
-   /**
-    * Gets the codigoPostal
-    */
-   public String getCodigoPostal() {
-      return this.codigoPostal;
-   }
+	public void setProvincia(Object value) {
+		this.provincia = value;
+	}
 
-   /**
-    * Sets the codigoPostal
-    */
-   public void setCodigoPostal(String value) {
-      this.codigoPostal = value;
-   }
+	public String getCiudad() {
+		return this.ciudad;
+	}
+
+	public void setCiudad(String value) {
+		this.ciudad = value;
+	}
+
+	public String getPais() {
+		return this.pais;
+	}
+
+	public void setPais(String value) {
+		this.pais = value;
+	}
+
+	public String getCodigoPostal() {
+		return this.codigoPostal;
+	}
+
+	public void setCodigoPostal(String value) {
+		this.codigoPostal = value;
+	}
+
+	@Override
+	public String toString() {
+		return "Direccion [calle=" + calle + ", altura=" + altura + ", provincia=" + provincia + ", ciudad=" + ciudad
+				+ ", pais=" + pais + ", codigoPostal=" + codigoPostal + "]";
+	}
+
+
 }

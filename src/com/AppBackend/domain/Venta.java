@@ -10,6 +10,8 @@ import java.util.Date;
  */
 public class Venta {
 
+	
+	int idVenta;
    /** Property cliente */
    Object cliente = new Cliente();
 

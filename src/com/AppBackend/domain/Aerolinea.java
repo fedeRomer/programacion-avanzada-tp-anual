@@ -3,44 +3,45 @@
  */
 package com.AppBackend.domain;
 
-import java.util.Objects;
+import java.io.Serializable;
 
-/**
- *
- */
-public class Aerolinea {
+public class Aerolinea implements Serializable{
 
-   /** Property Nombre */
-   String Nombre;
+	private static final long serialVersionUID = -4066101569874565022L;
 
-   /** Property Vuelos */
-   Object Vuelos = new Object();
 
-   /**
-    * Gets the Nombre
-    */
-   public String getNombre() {
-      return this.Nombre;
-   }
+	String Nombre;
 
-   /**
-    * Sets the Nombre
-    */
-   public void setNombre(String value) {
-      this.Nombre = value;
-   }
+	Object Vuelos = new Object();
 
-   /**
-    * Gets the Vuelos
-    */
-   public Object getVuelos() {
-      return this.Vuelos;
-   }
+	public Aerolinea(String nombre, Object vuelos) {
+		super();
+		Nombre = nombre;
+		Vuelos = vuelos;
+	}
 
-   /**
-    * Sets the Vuelos
-    */
-   public void setVuelos(Object value) {
-      this.Vuelos = (Object) value;
-   }
+	public Aerolinea() {
+		super();
+	}
+
+	public String getNombre() {
+		return this.Nombre;
+	}
+
+	public void setNombre(String value) {
+		this.Nombre = value;
+	}
+
+	public Object getVuelos() {
+		return this.Vuelos;
+	}
+
+	public void setVuelos(Object value) {
+		this.Vuelos = (Object) value;
+	}
+
+	@Override
+	public String toString() {
+		return "Aerolinea [Nombre=" + Nombre + ", Vuelos=" + Vuelos + "]";
+	}
 }
