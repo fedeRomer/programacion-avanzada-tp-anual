@@ -7,17 +7,17 @@ public class Aeropuerto implements Serializable {
 
 	private static final long serialVersionUID = 4489416593723971011L;
 
-	String identificacion;
+	private String identificacion;
 
-	String ciudad;
+	private String ciudad;
 
-	String provincia;
+	private String provincia;
 
-	String pais;
+	private String pais;
 
-	Date horaSalida;
+	private Date horaSalida;
 
-	Date horaLlegada;
+	private Date horaLlegada;
 	
 	
 

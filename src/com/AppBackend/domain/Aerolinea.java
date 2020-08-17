@@ -7,9 +7,9 @@ public class Aerolinea implements Serializable{
 	private static final long serialVersionUID = -4066101569874565022L;
 
 
-	String Nombre;
+	private String Nombre;
 
-	Object Vuelos = new Object();
+	private Object Vuelos = new Object();
 
 	public Aerolinea(String nombre, Object vuelos) {
 		super();

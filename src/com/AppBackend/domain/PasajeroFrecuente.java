@@ -6,15 +6,15 @@ public class PasajeroFrecuente implements Serializable{
 
 	private static final long serialVersionUID = 8579929575020220362L;
 
-	int idPasajeroFrecuente;
+	private int idPasajeroFrecuente;
 
-	int numeroPasajero;
+	private int numeroPasajero;
 
-	String categoria;
+	private String categoria;
 
-	String alianza;
+	private String alianza;
 
-	String aerolinea;
+	private String aerolinea;
 	
 
 	public PasajeroFrecuente(int idPasajeroFrecuente, int numeroPasajero, String categoria, String alianza,

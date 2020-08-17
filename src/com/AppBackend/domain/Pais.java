@@ -9,9 +9,9 @@ public class Pais implements Serializable {
 	 */
 	private static final long serialVersionUID = 3469414203813841773L;
 
-	String nombre;
+	private String nombre;
 
-	String provincia;
+	private String provincia;
 
 	public Pais(String nombre, String provincia) {
 		super();

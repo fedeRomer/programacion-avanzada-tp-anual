@@ -10,17 +10,17 @@ public class Pasaporte implements Serializable {
 	 */
 	private static final long serialVersionUID = 3909055847503191432L;
 
-	int idPasaporte;
+	private int idPasaporte;
 
-	int codigoPasaporte;
+	private int codigoPasaporte;
 
-	String pais;
+	private String pais;
 
-	String autoridadEmision;
+	private String autoridadEmision;
 
-	Date fechaEmision;
+	private Date fechaEmision;
 
-	Date fechaVencimiento;
+	private Date fechaVencimiento;
 
 	public Pasaporte(int idPasaporte, int codigoPasaporte, String pais, String autoridadEmision, Date fechaEmision,
 			Date fechaVencimiento) {

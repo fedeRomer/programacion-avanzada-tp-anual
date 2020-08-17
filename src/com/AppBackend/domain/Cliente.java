@@ -6,25 +6,25 @@ import java.util.Date;
 public class Cliente implements Serializable {
 	private static final long serialVersionUID = 1381326742965240694L;
 
-	int idCliente;
+	private int idCliente;
 
-	String nombreCompleto;
+	private String nombreCompleto;
 
-	int dni;
+	private int dni;
 
-	String cuil;
+	private String cuil;
 
-	Date fechaNacimiento;
+	private Date fechaNacimiento;
 
-	String mail;
+	private String mail;
 
-	Object pasaporte = new Pasaporte();
+	private Object pasaporte = new Pasaporte();
 
-	Object telefono = new Telefono();
+	private Object telefono = new Telefono();
 
-	Object direccion = new Direccion();
+	private Object direccion = new Direccion();
 
-	Object pasajeroFrecuente = new PasajeroFrecuente();
+	private Object pasajeroFrecuente = new PasajeroFrecuente();
 
 	public Cliente(int idCliente, String nombreCompleto, int dni, String cuil, Date fechaNacimiento, String mail,
 			Object pasaporte, Object telefono, Object direccion, Object pasajeroFrecuente) {

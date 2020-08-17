@@ -6,16 +6,16 @@ import java.util.Date;
 public class Venta implements Serializable {
 
 	private static final long serialVersionUID = 1587009634072513422L;
-	int idVenta;
-	Object cliente = new Cliente();
+	private int idVenta;
+	private Object cliente = new Cliente();
 
-	Object vuelo = new Vuelo();
+	private Object vuelo = new Vuelo();
 
-	Object aerolinea = new Aerolinea();
+	private Object aerolinea = new Aerolinea();
 
-	Date fechaDeVenta;
+	private Date fechaDeVenta;
 
-	String metodoDePago;
+	private String metodoDePago;
 
 	public Venta(int idVenta, Object cliente, Object vuelo, Object aerolinea, Date fechaDeVenta, String metodoDePago) {
 		super();

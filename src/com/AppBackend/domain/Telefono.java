@@ -6,11 +6,11 @@ public class Telefono implements Serializable{
 
 	private static final long serialVersionUID = 5551214220263138873L;
 
-	String laboral;
+	private String laboral;
 
-	String personal;
+	private String personal;
 
-	String celular;
+	private String celular;
 
 	public Telefono(String laboral, String personal, String celular) {
 		super();

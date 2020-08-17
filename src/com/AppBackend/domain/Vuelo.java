@@ -9,11 +9,11 @@ public class Vuelo implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 229504749680671403L;
-	int idVuelo;
-	int idCliente;
-	int idAerolinea;
-	Date fechaVenta;
-	String formaDePago;
+	private int idVuelo;
+	private int idCliente;
+	private int idAerolinea;
+	private Date fechaVenta;
+	private String formaDePago;
 
 	public Vuelo(int idVuelo, int idCliente, int idAerolinea, Date fechaVenta, String formaDePago) {
 		super();

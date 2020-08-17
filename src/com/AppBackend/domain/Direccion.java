@@ -7,17 +7,17 @@ public class Direccion implements Serializable {
 
 	private static final long serialVersionUID = -2802958673228442283L;
 
-	String calle;
+	private String calle;
 
-	String altura;
+	private String altura;
 
-	Object provincia;
+	private Object provincia;
 
-	String ciudad;
+	private String ciudad;
 
-	String pais;
+	private String pais;
 
-	String codigoPostal;
+	private String codigoPostal;
 
 	public Direccion(String calle, String altura, Object provincia, String ciudad, String pais, String codigoPostal) {
 		super();
