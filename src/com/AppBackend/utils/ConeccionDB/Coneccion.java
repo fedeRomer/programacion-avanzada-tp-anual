@@ -20,7 +20,7 @@ public class Coneccion {
 			Class.forName(properties1.getProperty("db.driver"));
 			Connection coneccion1 = (Connection) DriverManager.getConnection(properties1.getProperty("db.url"),properties1.getProperty("db.user"),properties1.getProperty("db.password"));
 	        	 
-			if(!coneccion1.isClosed()) {
+			if(!((java.sql.Connection) coneccion1).isClosed()) {
 				System.out.println("coneccion realizada con exito a la base de datos");
 			}
 			return coneccion1;
