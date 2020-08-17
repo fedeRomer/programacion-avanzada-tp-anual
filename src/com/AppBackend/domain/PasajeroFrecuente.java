@@ -1,95 +1,83 @@
-/**
- * Generated on Sat May 30 20:28:30 UTC 2020 by ObjGen 3.0
- */
 package com.AppBackend.domain;
 
-/**
- *
- */
-public class PasajeroFrecuente {
+import java.io.Serializable;
 
-   /** Property idPasajeroFrecuente */
-   int idPasajeroFrecuente;
+public class PasajeroFrecuente implements Serializable{
 
-   /** Property numeroPasajero */
-   int numeroPasajero;
+	private static final long serialVersionUID = 8579929575020220362L;
 
-   /** Property categoria */
-   String categoria;
+	int idPasajeroFrecuente;
 
-   /** Property alianza */
-   String alianza;
+	int numeroPasajero;
 
-   /** Property aerolinea */
-   String aerolinea;
+	String categoria;
 
-   /**
-    * Gets the idPasajeroFrecuente
-    */
-   public int getIdPasajeroFrecuente() {
-      return this.idPasajeroFrecuente;
-   }
+	String alianza;
 
-   /**
-    * Sets the idPasajeroFrecuente
-    */
-   public void setIdPasajeroFrecuente(int value) {
-      this.idPasajeroFrecuente = value;
-   }
+	String aerolinea;
+	
 
-   /**
-    * Gets the numeroPasajero
-    */
-   public int getNumeroPasajero() {
-      return this.numeroPasajero;
-   }
+	public PasajeroFrecuente(int idPasajeroFrecuente, int numeroPasajero, String categoria, String alianza,
+			String aerolinea) {
+		super();
+		this.idPasajeroFrecuente = idPasajeroFrecuente;
+		this.numeroPasajero = numeroPasajero;
+		this.categoria = categoria;
+		this.alianza = alianza;
+		this.aerolinea = aerolinea;
+	}
+	
+	public PasajeroFrecuente() {
+		super();
+	}
 
-   /**
-    * Sets the numeroPasajero
-    */
-   public void setNumeroPasajero(int value) {
-      this.numeroPasajero = value;
-   }
+	public int getIdPasajeroFrecuente() {
+		return this.idPasajeroFrecuente;
+	}
 
-   /**
-    * Gets the categoria
-    */
-   public String getCategoria() {
-      return this.categoria;
-   }
+	public void setIdPasajeroFrecuente(int value) {
+		this.idPasajeroFrecuente = value;
+	}
 
-   /**
-    * Sets the categoria
-    */
-   public void setCategoria(String value) {
-      this.categoria = value;
-   }
+	public int getNumeroPasajero() {
+		return this.numeroPasajero;
+	}
 
-   /**
-    * Gets the alianza
-    */
-   public String getAlianza() {
-      return this.alianza;
-   }
+	public void setNumeroPasajero(int value) {
+		this.numeroPasajero = value;
+	}
 
-   /**
-    * Sets the alianza
-    */
-   public void setAlianza(String value) {
-      this.alianza = value;
-   }
+	public String getCategoria() {
+		return this.categoria;
+	}
 
-   /**
-    * Gets the aerolinea
-    */
-   public String getAerolinea() {
-      return this.aerolinea;
-   }
+	public void setCategoria(String value) {
+		this.categoria = value;
+	}
 
-   /**
-    * Sets the aerolinea
-    */
-   public void setAerolinea(String value) {
-      this.aerolinea = value;
-   }
+	public String getAlianza() {
+		return this.alianza;
+	}
+
+	public void setAlianza(String value) {
+		this.alianza = value;
+	}
+
+	public String getAerolinea() {
+		return this.aerolinea;
+	}
+
+	public void setAerolinea(String value) {
+		this.aerolinea = value;
+	}
+
+	@Override
+	public String toString() {
+		return "PasajeroFrecuente [idPasajeroFrecuente=" + idPasajeroFrecuente + ", numeroPasajero=" + numeroPasajero
+				+ ", categoria=" + categoria + ", alianza=" + alianza + ", aerolinea=" + aerolinea + "]";
+	}
+	
+	
+
+
 }

@@ -1,5 +1,6 @@
-
 package com.AppBackend.domain;
+
+
 import java.io.Serializable;
 
 public class Direccion implements Serializable {

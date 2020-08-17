@@ -1,99 +1,81 @@
-/**
- * Generated on Sat May 30 21:13:36 UTC 2020 by ObjGen 3.0
- */
 package com.AppBackend.domain;
 
+import java.io.Serializable;
 import java.util.Date;
 
-/**
- *
- */
-public class Venta {
+public class Venta implements Serializable {
 
-	
+	private static final long serialVersionUID = 1587009634072513422L;
 	int idVenta;
-   /** Property cliente */
-   Object cliente = new Cliente();
+	Object cliente = new Cliente();
 
-   /** Property vuelo */
-   Object vuelo = new Vuelo();
+	Object vuelo = new Vuelo();
 
-   /** Property aerolinea */
-   Object aerolinea = new Aerolinea();
+	Object aerolinea = new Aerolinea();
 
-   /** Property fechaDeVenta */
-   Date fechaDeVenta;
+	Date fechaDeVenta;
 
-   /** Property metodoDePago */
-   String metodoDePago;
+	String metodoDePago;
 
-   /**
-    * Gets the cliente
-    */
-   public Object getCliente() {
-      return this.cliente;
-   }
+	public Venta(int idVenta, Object cliente, Object vuelo, Object aerolinea, Date fechaDeVenta, String metodoDePago) {
+		super();
+		this.idVenta = idVenta;
+		this.cliente = cliente;
+		this.vuelo = vuelo;
+		this.aerolinea = aerolinea;
+		this.fechaDeVenta = fechaDeVenta;
+		this.metodoDePago = metodoDePago;
+	}
+	
+	public Venta() {
+		super();
+	}
 
-   /**
-    * Sets the cliente
-    */
-   public void setCliente(Object value) {
-      this.cliente = value;
-   }
+	public Object getCliente() {
+		return this.cliente;
+	}
 
-   /**
-    * Gets the vuelo
-    */
-   public Object getVuelo() {
-      return this.vuelo;
-   }
+	public void setCliente(Object value) {
+		this.cliente = value;
+	}
 
-   /**
-    * Sets the vuelo
-    */
-   public void setVuelo(Object value) {
-      this.vuelo = value;
-   }
+	public Object getVuelo() {
+		return this.vuelo;
+	}
 
-   /**
-    * Gets the aerolinea
-    */
-   public Object getAerolinea() {
-      return this.aerolinea;
-   }
+	public void setVuelo(Object value) {
+		this.vuelo = value;
+	}
 
-   /**
-    * Sets the aerolinea
-    */
-   public void setAerolinea(Object value) {
-      this.aerolinea = value;
-   }
+	public Object getAerolinea() {
+		return this.aerolinea;
+	}
 
-   /**
-    * Gets the fechaDeVenta
-    */
-   public Date getFechaDeVenta() {
-      return this.fechaDeVenta;
-   }
+	public void setAerolinea(Object value) {
+		this.aerolinea = value;
+	}
 
-   /**
-    * Sets the fechaDeVenta
-    */
-   public void setFechaDeVenta(Date value) {
-      this.fechaDeVenta = value;
-   }
+	public Date getFechaDeVenta() {
+		return this.fechaDeVenta;
+	}
 
-   /**
-    * Gets the metodoDePago
-    */
-   public String getMetodoDePago() {
-      return this.metodoDePago;
-   }
+	public void setFechaDeVenta(Date value) {
+		this.fechaDeVenta = value;
+	}
 
-   /**
-    * Sets the metodoDePago
-    */
-   public void setMetodoDePago(String value) {
-      this.metodoDePago = value;
-   }
+	public String getMetodoDePago() {
+		return this.metodoDePago;
+	}
+
+	public void setMetodoDePago(String value) {
+		this.metodoDePago = value;
+	}
+
+	@Override
+	public String toString() {
+		return "Venta [idVenta=" + idVenta + ", cliente=" + cliente + ", vuelo=" + vuelo + ", aerolinea=" + aerolinea
+				+ ", fechaDeVenta=" + fechaDeVenta + ", metodoDePago=" + metodoDePago + "]";
+	}
+	
+	
 }

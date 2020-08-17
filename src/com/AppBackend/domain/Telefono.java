@@ -1,61 +1,56 @@
-/**
- * Generated on Sat May 30 21:05:09 UTC 2020 by ObjGen 3.0
- */
 package com.AppBackend.domain;
 
-/**
- *
- */
-public class Telefono {
+import java.io.Serializable;
 
-   /** Property laboral */
-   String laboral;
+public class Telefono implements Serializable{
 
-   /** Property personal */
-   String personal;
+	private static final long serialVersionUID = 5551214220263138873L;
 
-   /** Property celular */
-   String celular;
+	String laboral;
 
-   /**
-    * Gets the laboral
-    */
-   public String getLaboral() {
-      return this.laboral;
-   }
+	String personal;
 
-   /**
-    * Sets the laboral
-    */
-   public void setLaboral(String value) {
-      this.laboral = value;
-   }
+	String celular;
 
-   /**
-    * Gets the personal
-    */
-   public String getPersonal() {
-      return this.personal;
-   }
+	public Telefono(String laboral, String personal, String celular) {
+		super();
+		this.laboral = laboral;
+		this.personal = personal;
+		this.celular = celular;
+	}
+	
+	public Telefono() {
+		super();
+	}
 
-   /**
-    * Sets the personal
-    */
-   public void setPersonal(String value) {
-      this.personal = value;
-   }
+	public String getLaboral() {
+		return this.laboral;
+	}
 
-   /**
-    * Gets the celular
-    */
-   public String getCelular() {
-      return this.celular;
-   }
+	public void setLaboral(String value) {
+		this.laboral = value;
+	}
 
-   /**
-    * Sets the celular
-    */
-   public void setCelular(String value) {
-      this.celular = value;
-   }
+	public String getPersonal() {
+		return this.personal;
+	}
+
+	public void setPersonal(String value) {
+		this.personal = value;
+	}
+
+	public String getCelular() {
+		return this.celular;
+	}
+
+	public void setCelular(String value) {
+		this.celular = value;
+	}
+
+	@Override
+	public String toString() {
+		return "Telefono [laboral=" + laboral + ", personal=" + personal + ", celular=" + celular + "]";
+	}
+	
+	
 }

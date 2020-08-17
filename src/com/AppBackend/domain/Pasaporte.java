@@ -1,114 +1,88 @@
-/**
- * Generated on Sat May 30 20:36:27 UTC 2020 by ObjGen 3.0
- */
 package com.AppBackend.domain;
 
+import java.io.Serializable;
 import java.util.Date;
 
-/**
- *
- */
-public class Pasaporte {
- 
-   /** Property idPasaporte */
-   int idPasaporte;
+public class Pasaporte implements Serializable {
 
-   /** Property codigoPasaporte */
-   int codigoPasaporte;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3909055847503191432L;
 
-   /** Property Pais */
-   String Pais;
+	int idPasaporte;
 
-   /** Property autoridadEmision */
-   String autoridadEmision;
+	int codigoPasaporte;
 
-   /** Property fechaEmision */
-   Date fechaEmision;
+	String pais;
 
-   /** Property fechaVencimiento */
-   Date fechaVencimiento;
+	String autoridadEmision;
 
-   /**
-    * Gets the idPasaporte
-    */
-   public int getIdPasaporte() {
-      return this.idPasaporte;
-   }
+	Date fechaEmision;
 
-   /**
-    * Sets the idPasaporte
-    */
-   public void setIdPasaporte(int value) {
-      this.idPasaporte = value;
-   }
+	Date fechaVencimiento;
 
-   /**
-    * Gets the codigoPasaporte
-    */
-   public int getCodigoPasaporte() {
-      return this.codigoPasaporte;
-   }
+	public Pasaporte(int idPasaporte, int codigoPasaporte, String pais, String autoridadEmision, Date fechaEmision,
+			Date fechaVencimiento) {
+		super();
+		this.idPasaporte = idPasaporte;
+		this.codigoPasaporte = codigoPasaporte;
+		this.pais = pais;
+		this.autoridadEmision = autoridadEmision;
+		this.fechaEmision = fechaEmision;
+		this.fechaVencimiento = fechaVencimiento;
+	}
+	
+	
+	public Pasaporte() {
+		super();
+	}
+	public int getIdPasaporte() {
+		return this.idPasaporte;
+	}
 
-   /**
-    * Sets the codigoPasaporte
-    */
-   public void setCodigoPasaporte(int value) {
-      this.codigoPasaporte = value;
-   }
+	public void setIdPasaporte(int value) {
+		this.idPasaporte = value;
+	}
 
-   /**
-    * Gets the Pais
-    */
-   public String getPais() {
-      return this.Pais;
-   }
+	public int getCodigoPasaporte() {
+		return this.codigoPasaporte;
+	}
 
-   /**
-    * Sets the Pais
-    */
-   public void setPais(String value) {
-      this.Pais = value;
-   }
+	public void setCodigoPasaporte(int value) {
+		this.codigoPasaporte = value;
+	}
 
-   /**
-    * Gets the autoridadEmision
-    */
-   public String getAutoridadEmision() {
-      return this.autoridadEmision;
-   }
+	public String getPais() {
+		return this.pais;
+	}
 
-   /**
-    * Sets the autoridadEmision
-    */
-   public void setAutoridadEmision(String value) {
-      this.autoridadEmision = value;
-   }
+	public void setPais(String value) {
+		this.pais = value;
+	}
 
-   /**
-    * Gets the fechaEmision
-    */
-   public Date getFechaEmision() {
-      return this.fechaEmision;
-   }
+	public String getAutoridadEmision() {
+		return this.autoridadEmision;
+	}
 
-   /**
-    * Sets the fechaEmision
-    */
-   public void setFechaEmision(Date value) {
-      this.fechaEmision = value;
-   }
+	public void setAutoridadEmision(String value) {
+		this.autoridadEmision = value;
+	}
 
-   /**
-    * Gets the fechaVencimiento
-    */
-   public Date getFechaVencimiento() {
-      return this.fechaVencimiento;
-   }
+	public Date getFechaEmision() {
+		return this.fechaEmision;
+	}
 
-   /**
-    * Sets the fechaVencimiento
-    */
-   public void setFechaVencimiento(Date value) {
-      this.fechaVencimiento = value;
-   }
+	public void setFechaEmision(Date value) {
+		this.fechaEmision = value;
+	}
+
+	public Date getFechaVencimiento() {
+		return this.fechaVencimiento;
+	}
+
+	public void setFechaVencimiento(Date value) {
+		this.fechaVencimiento = value;
+	}
+
 }
