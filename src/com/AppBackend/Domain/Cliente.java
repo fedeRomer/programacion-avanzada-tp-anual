@@ -3,171 +3,139 @@
  */
 package com.AppBackend.Domain;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  *
  */
-public class Cliente {
+public class Cliente implements Serializable {
 
-   /** Property idCliente */
-   int idCliente;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1381326742965240694L;
 
-   /** Property nombreCompleto */
-   String nombreCompleto;
+	int idCliente;
 
-   /** Property dni */
-   int dni;
+	String nombreCompleto;
 
-   /** Property cuil */
-   String cuil;
+	int dni;
 
-   /** Property fechaNacimiento */
-   Date fechaNacimiento;
+	String cuil;
 
-   /** Property mail */
-   String mail;
+	Date fechaNacimiento;
 
-   /** Property pasaporte */
-   Object pasaporte = new Pasaporte();
+	String mail;
 
-   /** Property telefono */
-   Object telefono = new Telefono();
+	Object pasaporte = new Pasaporte();
 
-   /** Property direccion */
-   Object direccion = new Direccion();
+	Object telefono = new Telefono();
 
-   /** Property pasajeroFrecuente */
-   Object pasajeroFrecuente = new PasajeroFrecuente();
+	Object direccion = new Direccion();
 
-   /**
-    * Gets the idCliente
-    */
-   public int getIdCliente() {
-      return this.idCliente;
-   }
+	Object pasajeroFrecuente = new PasajeroFrecuente();
 
-   /**
-    * Sets the idCliente
-    */
-   public void setIdCliente(int value) {
-      this.idCliente = value;
-   }
+	public Cliente(int idCliente, String nombreCompleto, int dni, String cuil, Date fechaNacimiento, String mail,
+			Object pasaporte, Object telefono, Object direccion, Object pasajeroFrecuente) {
+		super();
+		this.idCliente = idCliente;
+		this.nombreCompleto = nombreCompleto;
+		this.dni = dni;
+		this.cuil = cuil;
+		this.fechaNacimiento = fechaNacimiento;
+		this.mail = mail;
+		this.pasaporte = pasaporte;
+		this.telefono = telefono;
+		this.direccion = direccion;
+		this.pasajeroFrecuente = pasajeroFrecuente;
+	}
 
-   /**
-    * Gets the nombreCompleto
-    */
-   public String getNombreCompleto() {
-      return this.nombreCompleto;
-   }
+	public Cliente() {
+		super();
 
-   /**
-    * Sets the nombreCompleto
-    */
-   public void setNombreCompleto(String value) {
-      this.nombreCompleto = value;
-   }
+	}
 
-   /**
-    * Gets the dni
-    */
-   public int getDni() {
-      return this.dni;
-   }
+	public int getIdCliente() {
+		return this.idCliente;
+	}
 
-   /**
-    * Sets the dni
-    */
-   public void setDni(int value) {
-      this.dni = value;
-   }
+	public void setIdCliente(int value) {
+		this.idCliente = value;
+	}
 
-   /**
-    * Gets the cuil
-    */
-   public String getCuil() {
-      return this.cuil;
-   }
+	public String getNombreCompleto() {
+		return this.nombreCompleto;
+	}
 
-   /**
-    * Sets the cuil
-    */
-   public void setCuil(String value) {
-      this.cuil = value;
-   }
+	public void setNombreCompleto(String value) {
+		this.nombreCompleto = value;
+	}
 
-   /**
-    * Gets the fechaNacimiento
-    */
-   public Date getFechaNacimiento() {
-      return this.fechaNacimiento;
-   }
+	public int getDni() {
+		return this.dni;
+	}
 
-   /**
-    * Sets the fechaNacimiento
-    */
-   public void setFechaNacimiento(Date value) {
-      this.fechaNacimiento = value;
-   }
+	public void setDni(int value) {
+		this.dni = value;
+	}
 
-   /**
-    * Gets the mail
-    */
-   public String getMail() {
-      return this.mail;
-   }
+	public String getCuil() {
+		return this.cuil;
+	}
 
-   /**
-    * Sets the mail
-    */
-   public void setMail(String value) {
-      this.mail = value;
-   }
+	public void setCuil(String value) {
+		this.cuil = value;
+	}
 
-   /**
-    * Gets the pasaporte
-    */
-   public Object getPasaporte() {
-      return this.pasaporte;
-   }
+	public Date getFechaNacimiento() {
+		return this.fechaNacimiento;
+	}
 
-   /**
-    * Sets the pasaporte
-    */
-   public void setPasaporte(Object value) {
-      this.pasaporte = value;
-   }
+	public void setFechaNacimiento(Date value) {
+		this.fechaNacimiento = value;
+	}
 
-   /**
-    * Gets the telefono
-    */
-   public Object getTelefono() {
-      return this.telefono;
-   }
+	public String getMail() {
+		return this.mail;
+	}
 
-   /**
-    * Sets the telefono
-    */
-   public void setTelefono(Object value) {
-      this.telefono = value;
-   }
+	public void setMail(String value) {
+		this.mail = value;
+	}
 
-   /**
-    * Gets the direccion
-    */
-   public Object getDireccion() {
-      return this.direccion;
-   }
+	public Object getPasaporte() {
+		return this.pasaporte;
+	}
 
-   /**
-    * Sets the direccion
-    */
-   public void setDireccion(Object value) {
-      this.direccion = value;
-   }
+	public void setPasaporte(Object value) {
+		this.pasaporte = value;
+	}
 
-   /**
-    * Gets the pasajeroFrecuente
-    */
+	public Object getTelefono() {
+		return this.telefono;
+	}
+
+	public void setTelefono(Object value) {
+		this.telefono = value;
+	}
+
+	public Object getDireccion() {
+		return this.direccion;
+	}
+
+	public void setDireccion(Object value) {
+		this.direccion = value;
+	}
+
+	@Override
+	public String toString() {
+		return "Cliente [idCliente=" + idCliente + ", nombreCompleto=" + nombreCompleto + ", dni=" + dni + ", cuil="
+				+ cuil + ", fechaNacimiento=" + fechaNacimiento + ", mail=" + mail + ", pasaporte=" + pasaporte
+				+ ", telefono=" + telefono + ", direccion=" + direccion + ", pasajeroFrecuente=" + pasajeroFrecuente
+				+ "]";
+	}
+	
+	
 
 }
