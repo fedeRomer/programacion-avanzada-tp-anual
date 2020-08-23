@@ -19,7 +19,8 @@ public class Tests {
 	public void testQuery() throws ClassNotFoundException, SQLException {
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/northwind?" + "user=root&password=1234");
-		String query = "SELECT * FROM northwind.customers" + "WHERE COUNTRY LIKE  %?%";
+		String query = "SELECT * FROM northwind.customers" 
+						+ " WHERE COUNTRY LIKE ?";
 
 		PreparedStatement p = conn.prepareStatement(query);
 		ResultSet resultSet;
@@ -37,7 +38,7 @@ public class Tests {
 		while (resultSet.next()) {
 			for (int i = 1; i <= columnsNumber; i++) {
 				if (i > 1)
-					System.out.print(", ");
+					System.out.print("");
 				String columnValue = resultSet.getString(i);
 				System.out.print("Columna: " + rsmd.getColumnName(i) + " Valor: " + columnValue + "\n");
 				// System.out.println(columnValue+"\n");
