@@ -1,4 +1,4 @@
-package com.AppBackend.utils.ConeccionDB;
+package com.AppBackend.utils.ConexionDB;
 import java.sql.*;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -7,7 +7,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public class Coneccion {
+public class Conexion {
 //test3
 	public Connection getConnection() {
 		
