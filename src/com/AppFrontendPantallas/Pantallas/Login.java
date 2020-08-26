@@ -61,7 +61,7 @@ public class Login extends JFrame {
 		contentPane.add(panel);
 		
 		JLabel lblNewLabel = new JLabel("User name");
-		lblNewLabel.setForeground(new Color(0, 204, 0));
+		lblNewLabel.setForeground(new Color(255, 102, 0));
 		lblNewLabel.setBounds(220, 31, 171, 15);
 		
 		textField = new JTextField();
@@ -75,7 +75,7 @@ public class Login extends JFrame {
 		separator_1.setBounds(336, 89, 1, 2);
 		
 		JLabel lblNewLabel_1 = new JLabel("Email");
-		lblNewLabel_1.setForeground(new Color(0, 204, 0));
+		lblNewLabel_1.setForeground(new Color(255, 102, 0));
 		lblNewLabel_1.setBounds(220, 97, 153, 15);
 		
 		textField_1 = new JTextField();
@@ -86,7 +86,7 @@ public class Login extends JFrame {
 		separator_2.setBounds(390, 135, 1, 2);
 		
 		JLabel lblNewLabel_2 = new JLabel("Password");
-		lblNewLabel_2.setForeground(new Color(0, 204, 0));
+		lblNewLabel_2.setForeground(new Color(255, 102, 0));
 		lblNewLabel_2.setBounds(225, 165, 147, 15);
 		
 		passwordField = new JPasswordField();
@@ -96,7 +96,7 @@ public class Login extends JFrame {
 		separator_3.setBounds(203, 219, 1, 2);
 		
 		JLabel lblNewLabel_2_1 = new JLabel("Retry password");
-		lblNewLabel_2_1.setForeground(new Color(0, 204, 0));
+		lblNewLabel_2_1.setForeground(new Color(255, 102, 0));
 		lblNewLabel_2_1.setBounds(225, 245, 166, 15);
 		
 		passwordField_1 = new JPasswordField();
@@ -104,7 +104,7 @@ public class Login extends JFrame {
 		
 		JButton btnNewButton = new JButton("Login");
 		btnNewButton.setForeground(new Color(0, 0, 0));
-		btnNewButton.setBackground(new Color(0, 204, 0));
+		btnNewButton.setBackground(new Color(255, 102, 0));
 		btnNewButton.setBounds(225, 328, 166, 25);
 		
 		JLabel lblNewLabel_3 = new JLabel("");
