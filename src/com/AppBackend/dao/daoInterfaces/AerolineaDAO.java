@@ -1,6 +1,6 @@
 package com.AppBackend.dao.daoInterfaces;
 
-public interface daoLineaAerea {
+public interface AerolineaDAO {
 	
 	
 

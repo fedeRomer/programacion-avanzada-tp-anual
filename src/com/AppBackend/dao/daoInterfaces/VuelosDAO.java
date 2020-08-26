@@ -4,7 +4,7 @@ import java.util.List;
 import com.AppBackend.exceptions.NoSuchIdException;
 import com.AppBackend.domain.Vuelo;
 
-public interface daoVuelos {
+public interface VuelosDAO {
 	
 	    public void addVuelo(Vuelo vuelo);
 	    public Vuelo updateVuelo(Vuelo vuelo, int idVuelo);

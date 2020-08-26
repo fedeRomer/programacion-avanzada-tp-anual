@@ -1,11 +1,11 @@
 package com.AppBackend.dao.daoImplementations;
 import java.util.List;
 
-import com.AppBackend.dao.daoInterfaces.daoCliente;
+import com.AppBackend.dao.daoInterfaces.ClienteDAO;
 import com.AppBackend.domain.Cliente;
 import com.AppBackend.exceptions.NoSuchIdException;
 
-public class daoClienteimpl implements daoCliente{
+public class ClienteDAOimpl implements ClienteDAO{
 
 	@Override
 	public void addCliente(Cliente cliente) {

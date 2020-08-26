@@ -2,9 +2,9 @@ package com.AppBackend.dao.daoImplementations;
 
 import java.util.List;
 
-import com.AppBackend.dao.daoInterfaces.daoVuelos;
+import com.AppBackend.dao.daoInterfaces.VuelosDAO;
 import com.AppBackend.domain.Vuelo;
-public class daoVuelosimpl implements daoVuelos{
+public class VuelosDAOimpl implements VuelosDAO{
 
 	@Override
 	public void addVuelo(Vuelo vuelo) {

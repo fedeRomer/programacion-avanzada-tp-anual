@@ -1,10 +1,10 @@
 package com.AppBackend.dao.daoImplementations;
 import java.util.List;
 
-import com.AppBackend.dao.daoInterfaces.daoVentas;
+import com.AppBackend.dao.daoInterfaces.VentasDAO;
 import com.AppBackend.domain.Venta;
 
-public class daoVentasimpl implements daoVentas {
+public class VentasDAOimpl implements VentasDAO {
 
 	@Override
 	public void addVenta(Venta venta) {
