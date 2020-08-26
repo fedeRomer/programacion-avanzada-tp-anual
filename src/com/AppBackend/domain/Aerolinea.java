@@ -7,14 +7,17 @@ public class Aerolinea implements Serializable{
 	private static final long serialVersionUID = -4066101569874565022L;
 
 
-	private String Nombre;
+	private String nombre;
 
-	private Object Vuelos = new Object();
+	private Object vuelos = new Object();
+	
+	private Alianza alianza;
 
-	public Aerolinea(String nombre, Object vuelos) {
+	public Aerolinea(String nombre, Object vuelos,Alianza alianza) {
 		super();
-		Nombre = nombre;
-		Vuelos = vuelos;
+		this.nombre = nombre;
+		this.vuelos = vuelos;
+		this.alianza = alianza;
 	}
 
 	public Aerolinea() {
@@ -22,23 +25,34 @@ public class Aerolinea implements Serializable{
 	}
 
 	public String getNombre() {
-		return this.Nombre;
+		return this.nombre;
 	}
 
 	public void setNombre(String value) {
-		this.Nombre = value;
+		this.nombre = value;
 	}
 
 	public Object getVuelos() {
-		return this.Vuelos;
+		return this.vuelos;
 	}
 
 	public void setVuelos(Object value) {
-		this.Vuelos = (Object) value;
+		this.vuelos = (Object) value;
+	}
+
+
+	public Alianza getAlianza() {
+		return alianza;
+	}
+
+	public void setAlianza(Alianza alianza) {
+		this.alianza = alianza;
 	}
 
 	@Override
 	public String toString() {
-		return "Aerolinea [Nombre=" + Nombre + ", Vuelos=" + Vuelos + "]";
+		return "Aerolinea [nombre=" + nombre + ", vuelos=" + vuelos + ", alianza=" + alianza + "]";
 	}
+	
+	
 }
