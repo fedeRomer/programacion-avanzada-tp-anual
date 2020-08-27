@@ -18,7 +18,7 @@ import java.awt.Color;
 import javax.swing.SwingConstants;
 import javax.swing.ImageIcon;
 
-public class Login extends JFrame {
+public class RegistroUsuario1 extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -33,7 +33,7 @@ public class Login extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Login frame = new Login();
+					RegistroUsuario1 frame = new RegistroUsuario1();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -45,7 +45,7 @@ public class Login extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Login() {
+	public RegistroUsuario1() {
 		setTitle("Aerilinea Avazada");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 666, 422);
@@ -96,18 +96,12 @@ public class Login extends JFrame {
 		passwordField_1 = new JPasswordField();
 		passwordField_1.setBounds(441, 283, 166, 19);
 		
-		JButton btnNewButton = new JButton("Registrarse");
-		btnNewButton.setBounds(524, 352, 123, 25);
-		btnNewButton.setForeground(new Color(0, 0, 0));
-		btnNewButton.setBackground(Color.RED);
-		
 		JLabel lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setBounds(0, 12, 371, 391);
 		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_3.setIcon(new ImageIcon(Login.class.getResource("/com/AppFrontendPantallas/Imagenes/aviones.jpg")));
+		lblNewLabel_3.setIcon(new ImageIcon(RegistroUsuario1.class.getResource("/com/AppFrontendPantallas/Imagenes/aviones.jpg")));
 		lblNewLabel_3.setVerticalAlignment(SwingConstants.TOP);
 		panel.setLayout(null);
-		panel.add(btnNewButton);
 		panel.add(lblNewLabel_3);
 		panel.add(textField);
 		panel.add(separator);
@@ -120,10 +114,10 @@ public class Login extends JFrame {
 		panel.add(lblNewLabel_2_1);
 		panel.add(separator_1);
 		
-		JButton btnNewButton_1 = new JButton("Login");
-		btnNewButton_1.setBounds(389, 352, 123, 24);
+		JButton btnNewButton_1 = new JButton("Continue");
+		btnNewButton_1.setBounds(456, 353, 123, 24);
 		btnNewButton_1.setForeground(Color.BLACK);
-		btnNewButton_1.setBackground(Color.GREEN);
+		btnNewButton_1.setBackground(new Color(204, 51, 0));
 		panel.add(btnNewButton_1);
 	}
 }
