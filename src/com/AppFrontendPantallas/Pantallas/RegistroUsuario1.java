@@ -17,14 +17,14 @@ import javax.swing.JButton;
 import java.awt.Color;
 import javax.swing.SwingConstants;
 import javax.swing.ImageIcon;
+import javax.swing.UIManager;
+import java.awt.Font;
 
 public class RegistroUsuario1 extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
-	private JTextField textField_1;
 	private JPasswordField passwordField;
-	private JPasswordField passwordField_1;
 
 	/**
 	 * Launch the application.
@@ -48,7 +48,7 @@ public class RegistroUsuario1 extends JFrame {
 	public RegistroUsuario1() {
 		setTitle("Aerilinea Avazada");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 666, 422);
+		setBounds(100, 100, 598, 422);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -57,67 +57,56 @@ public class RegistroUsuario1 extends JFrame {
 		JPanel panel = new JPanel();
 		panel.setForeground(new Color(0, 204, 0));
 		panel.setBackground(new Color(0, 0, 0));
-		panel.setBounds(0, -14, 666, 415);
+		panel.setBounds(0, -14, 642, 399);
 		contentPane.add(panel);
 		
 		JLabel lblNewLabel = new JLabel("User name");
-		lblNewLabel.setBounds(436, 21, 95, 19);
-		lblNewLabel.setForeground(new Color(255, 102, 0));
+		lblNewLabel.setFont(new Font("Dialog", Font.BOLD, 20));
+		lblNewLabel.setBackground(UIManager.getColor("Button.background"));
+		lblNewLabel.setBounds(199, 43, 147, 19);
+		lblNewLabel.setForeground(Color.WHITE);
 		
 		textField = new JTextField();
-		textField.setBounds(436, 52, 171, 19);
+		textField.setForeground(new Color(240, 248, 255));
+		textField.setBackground(Color.DARK_GRAY);
+		textField.setBounds(184, 74, 171, 19);
 		textField.setColumns(10);
 		
-		JSeparator separator = new JSeparator();
-		separator.setBounds(563, 69, -173, 2);
-		
-		JSeparator separator_1 = new JSeparator();
-		separator_1.setBounds(336, 89, 1, 2);
-		
-		JLabel lblNewLabel_1 = new JLabel("Email");
-		lblNewLabel_1.setBounds(443, 98, 153, 15);
-		lblNewLabel_1.setForeground(new Color(255, 102, 0));
-		
-		textField_1 = new JTextField();
-		textField_1.setBounds(439, 125, 170, 19);
-		textField_1.setColumns(10);
-		
 		JLabel lblNewLabel_2 = new JLabel("Password");
-		lblNewLabel_2.setBounds(443, 170, 147, 15);
-		lblNewLabel_2.setForeground(new Color(255, 102, 0));
+		lblNewLabel_2.setFont(new Font("Dialog", Font.BOLD, 20));
+		lblNewLabel_2.setBounds(199, 140, 132, 15);
+		lblNewLabel_2.setForeground(Color.WHITE);
 		
 		passwordField = new JPasswordField();
-		passwordField.setBounds(441, 197, 166, 19);
+		passwordField.setForeground(new Color(240, 248, 255));
+		passwordField.setFont(new Font("Dialog", Font.PLAIN, 18));
+		passwordField.setBackground(Color.DARK_GRAY);
+		passwordField.setBounds(184, 180, 171, 19);
+		panel.setLayout(null);
+		panel.add(textField);
+		panel.add(lblNewLabel);
+		panel.add(passwordField);
+		panel.add(lblNewLabel_2);
 		
-		JLabel lblNewLabel_2_1 = new JLabel("Retry password");
-		lblNewLabel_2_1.setBounds(441, 256, 166, 15);
-		lblNewLabel_2_1.setForeground(new Color(255, 102, 0));
+		JButton btnNewButton_1_1 = new JButton("Registrarse");
+		btnNewButton_1_1.setFont(new Font("Dialog", Font.BOLD, 16));
+		btnNewButton_1_1.setForeground(Color.WHITE);
+		btnNewButton_1_1.setBackground(new Color(0, 0, 255));
+		btnNewButton_1_1.setBounds(62, 326, 147, 24);
+		panel.add(btnNewButton_1_1);
 		
-		passwordField_1 = new JPasswordField();
-		passwordField_1.setBounds(441, 283, 166, 19);
+		JButton btnNewButton_1 = new JButton("Login");
+		btnNewButton_1.setFont(new Font("Dialog", Font.BOLD, 16));
+		btnNewButton_1.setBounds(338, 326, 123, 24);
+		btnNewButton_1.setForeground(new Color(240, 248, 255));
+		btnNewButton_1.setBackground(new Color(0, 255, 0));
+		panel.add(btnNewButton_1);
 		
 		JLabel lblNewLabel_3 = new JLabel("");
-		lblNewLabel_3.setBounds(0, 12, 371, 391);
+		lblNewLabel_3.setBounds(-33, 12, 668, 387);
 		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_3.setIcon(new ImageIcon(RegistroUsuario1.class.getResource("/com/AppFrontendPantallas/Imagenes/aviones.jpg")));
 		lblNewLabel_3.setVerticalAlignment(SwingConstants.TOP);
-		panel.setLayout(null);
 		panel.add(lblNewLabel_3);
-		panel.add(textField);
-		panel.add(separator);
-		panel.add(lblNewLabel);
-		panel.add(lblNewLabel_1);
-		panel.add(textField_1);
-		panel.add(passwordField);
-		panel.add(lblNewLabel_2);
-		panel.add(passwordField_1);
-		panel.add(lblNewLabel_2_1);
-		panel.add(separator_1);
-		
-		JButton btnNewButton_1 = new JButton("Continue");
-		btnNewButton_1.setBounds(456, 353, 123, 24);
-		btnNewButton_1.setForeground(Color.BLACK);
-		btnNewButton_1.setBackground(new Color(204, 51, 0));
-		panel.add(btnNewButton_1);
 	}
 }
