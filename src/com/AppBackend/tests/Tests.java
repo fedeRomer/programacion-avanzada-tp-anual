@@ -18,18 +18,16 @@ public class Tests {
 	@Test
 	public void testQuery() throws ClassNotFoundException, SQLException {
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/northwind?" + "user=root&password=1234");
-		String query = "SELECT * FROM northwind.customers" 
-						+ " WHERE COUNTRY LIKE ?";
+		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/aerolineas?" + "user=admin&password=eCMJjbmc");
+		String query = "SELECT * FROM aerolineas.cliente";
 
 		PreparedStatement p = conn.prepareStatement(query);
 		ResultSet resultSet;
 		List<Object> paramList = new ArrayList<Object>();
-
+/*
 		paramList.add("Germany");
-
 		p.setString(1, paramList.get(0).toString());
-
+*/
 		System.out.println("ejecutando query: " + p);
 		resultSet = p.executeQuery();
 		ResultSetMetaData rsmd = resultSet.getMetaData();
