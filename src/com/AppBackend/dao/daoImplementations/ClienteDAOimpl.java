@@ -13,11 +13,6 @@ public class ClienteDAOimpl implements ClienteDAO{
 		
 	}
 
-	@Override
-	public Cliente updateCliente(Cliente usuario, int idUsuario) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
 	public void deleteCliente(int idUsuario) {
@@ -33,6 +28,13 @@ public class ClienteDAOimpl implements ClienteDAO{
 
 	@Override
 	public Cliente getCliente(int idUsuario) throws NoSuchIdException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public Cliente updateCliente(Cliente usuario) {
 		// TODO Auto-generated method stub
 		return null;
 	}}

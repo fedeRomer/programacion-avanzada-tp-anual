@@ -11,10 +11,6 @@ public class VentasDAOimpl implements VentasDAO {
 				
 	}
 
-	@Override
-	public Venta updateVenta(Venta venta, int idVenta) {
-		return null;
-	}
 
 	@Override
 	public void deleteVenta(int idVenta) {
@@ -28,6 +24,13 @@ public class VentasDAOimpl implements VentasDAO {
 
 	@Override
 	public Venta getVenta(int idVenta) {
+		return null;
+	}
+
+
+	@Override
+	public Venta updateVenta(Venta venta) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 

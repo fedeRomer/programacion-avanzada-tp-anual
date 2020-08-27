@@ -11,10 +11,6 @@ public class VuelosDAOimpl implements VuelosDAO{
 		
 	}
 
-	@Override
-	public Vuelo updateVuelo(Vuelo vuelo, int idVuelo) {
-		return null;
-	}
 
 	@Override
 	public void deleteVuelo(int idVuelo) {
@@ -28,6 +24,13 @@ public class VuelosDAOimpl implements VuelosDAO{
 
 	@Override
 	public Vuelo getVuelo(int idVuelo) {
+		return null;
+	}
+
+
+	@Override
+	public Vuelo updateVuelo(Vuelo vuelo) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 

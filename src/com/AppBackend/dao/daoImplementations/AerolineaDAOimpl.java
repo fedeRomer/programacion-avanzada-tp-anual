@@ -13,11 +13,6 @@ public class AerolineaDAOimpl implements AerolineaDAO{
 		
 	}
 
-	@Override
-	public Aerolinea updateAerolinea(Aerolinea a, int idAerolinea) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
 	public void deleteAerolinea(int idAerolinea) {
@@ -33,6 +28,13 @@ public class AerolineaDAOimpl implements AerolineaDAO{
 
 	@Override
 	public Aerolinea getAerolinea(int aerolinea) throws NoSuchIdException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public Aerolinea updateAerolinea(Aerolinea a) {
 		// TODO Auto-generated method stub
 		return null;
 	}
