@@ -7,32 +7,23 @@ public class Cliente implements Serializable {
 	private static final long serialVersionUID = 1381326742965240694L;
 
 	private int idCliente;
-
 	private String nombreCompleto;
-
 	private int dni;
-
-	private String cuil;
-
+	private String cuilCuit;
 	private Date fechaNacimiento;
-
 	private String mail;
-
 	private Object pasaporte = new Pasaporte();
-
 	private Object telefono = new Telefono();
-
 	private Object direccion = new Direccion();
-
 	private Object pasajeroFrecuente = new PasajeroFrecuente();
 
-	public Cliente(int idCliente, String nombreCompleto, int dni, String cuil, Date fechaNacimiento, String mail,
+	public Cliente(int idCliente, String nombreCompleto, int dni, String cuilCuit, Date fechaNacimiento, String mail,
 			Object pasaporte, Object telefono, Object direccion, Object pasajeroFrecuente) {
 		super();
 		this.idCliente = idCliente;
 		this.nombreCompleto = nombreCompleto;
 		this.dni = dni;
-		this.cuil = cuil;
+		this.cuilCuit = cuilCuit;
 		this.fechaNacimiento = fechaNacimiento;
 		this.mail = mail;
 		this.pasaporte = pasaporte;
@@ -70,12 +61,12 @@ public class Cliente implements Serializable {
 		this.dni = value;
 	}
 
-	public String getCuil() {
-		return this.cuil;
+	public String getCuilCuit() {
+		return this.cuilCuit;
 	}
 
-	public void setCuil(String value) {
-		this.cuil = value;
+	public void setCuilCuit(String value) {
+		this.cuilCuit = value;
 	}
 
 	public Date getFechaNacimiento() {
@@ -120,8 +111,8 @@ public class Cliente implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Cliente [idCliente=" + idCliente + ", nombreCompleto=" + nombreCompleto + ", dni=" + dni + ", cuil="
-				+ cuil + ", fechaNacimiento=" + fechaNacimiento + ", mail=" + mail + ", pasaporte=" + pasaporte
+		return "Cliente [idCliente=" + idCliente + ", nombreCompleto=" + nombreCompleto + ", dni=" + dni + ", cuil/cuit="
+				+ cuilCuit + ", fechaNacimiento=" + fechaNacimiento + ", mail=" + mail + ", pasaporte=" + pasaporte
 				+ ", telefono=" + telefono + ", direccion=" + direccion + ", pasajeroFrecuente=" + pasajeroFrecuente
 				+ "]";
 	}
