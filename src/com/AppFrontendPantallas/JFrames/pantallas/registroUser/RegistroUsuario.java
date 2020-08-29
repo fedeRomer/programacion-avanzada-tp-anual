@@ -15,6 +15,10 @@ import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JComboBox;
+import com.toedter.calendar.JDayChooser;
+import com.toedter.calendar.JMonthChooser;
+import com.toedter.calendar.JYearChooser;
 
 public class RegistroUsuario extends JFrame implements ActionListener {
 
@@ -28,6 +32,9 @@ public class RegistroUsuario extends JFrame implements ActionListener {
 	private JPasswordField passwordField_1;
 	private JTextField textField_3;
 	private JTextField textField_4;
+	private JTextField textField_5;
+	private JTextField textField_6;
+	private JTextField textField_7;
 
 	
 	public RegistroUsuario() {
@@ -52,69 +59,65 @@ public class RegistroUsuario extends JFrame implements ActionListener {
 		
 		JLabel apellido = new JLabel("Apellido");
 		apellido.setForeground(Color.WHITE);
-		apellido.setBounds(323, 12, 70, 15);
+		apellido.setBounds(22, 62, 70, 15);
 		contentPane.add(apellido);
 		
 		JLabel email = new JLabel("Email");
 		email.setForeground(Color.WHITE);
-		email.setBounds(22, 39, 70, 19);
+		email.setBounds(295, 105, 70, 19);
 		contentPane.add(email);
 		
 		JLabel password = new JLabel("Password");
 		password.setForeground(Color.WHITE);
-		password.setBounds(22, 74, 70, 15);
+		password.setBounds(22, 107, 70, 15);
 		contentPane.add(password);
 		
 		textField_1 = new JTextField();
 		textField_1.setColumns(10);
-		textField_1.setBounds(411, 10, 128, 19);
+		textField_1.setBounds(120, 60, 128, 19);
 		contentPane.add(textField_1);
-		
-		JCalendar calendar = new JCalendar();
-		calendar.setBounds(22, 151, 253, 143);
-		contentPane.add(calendar);
 		
 		textField_2 = new JTextField();
 		textField_2.setColumns(10);
-		textField_2.setBounds(120, 41, 128, 19);
+		textField_2.setBounds(360, 105, 128, 19);
 		contentPane.add(textField_2);
 		
 		passwordField = new JPasswordField();
-		passwordField.setBounds(120, 72, 128, 19);
+		passwordField.setBounds(120, 105, 128, 19);
 		contentPane.add(passwordField);
 		
 		JLabel retry = new JLabel("Retry");
 		retry.setForeground(Color.WHITE);
-		retry.setBounds(323, 66, 70, 19);
+		retry.setBounds(295, 60, 70, 19);
 		contentPane.add(retry);
 		
 		passwordField_1 = new JPasswordField();
-		passwordField_1.setBounds(411, 72, 128, 19);
+		passwordField_1.setBounds(360, 60, 128, 19);
 		contentPane.add(passwordField_1);
 		
 		JLabel dni = new JLabel("Dni");
 		dni.setForeground(Color.WHITE);
-		dni.setBounds(323, 39, 70, 15);
+		dni.setBounds(295, 12, 70, 15);
 		contentPane.add(dni);
 		
 		textField_3 = new JTextField();
 		textField_3.setColumns(10);
-		textField_3.setBounds(411, 41, 128, 19);
+		textField_3.setBounds(360, 10, 128, 19);
 		contentPane.add(textField_3);
 		
 		JLabel cuit = new JLabel("Cuit/Cuil");
 		cuit.setForeground(Color.WHITE);
-		cuit.setBounds(22, 108, 70, 15);
+		cuit.setBounds(22, 167, 70, 15);
 		contentPane.add(cuit);
 		
 		textField_4 = new JTextField();
 		textField_4.setColumns(10);
-		textField_4.setBounds(120, 103, 128, 19);
+		textField_4.setBounds(120, 165, 128, 19);
 		contentPane.add(textField_4);
 		
 		JLabel fecha = new JLabel("Fecha de nacimiento");
 		fecha.setForeground(Color.WHITE);
-		fecha.setBounds(22, 135, 159, 15);
+		fecha.setBounds(571, 12, 159, 15);
 		contentPane.add(fecha);
 		
 		JButton continuar = new JButton("Continuar");
@@ -122,7 +125,7 @@ public class RegistroUsuario extends JFrame implements ActionListener {
 		continuar.setFont(new Font("Dialog", Font.BOLD, 14));
 		continuar.setForeground(Color.WHITE);
 		continuar.setBackground(new Color(0, 128, 0));
-		continuar.setBounds(648, 410, 117, 25);
+		continuar.setBounds(420, 429, 117, 25);
 		contentPane.add(continuar);
 		
 		JButton cancelar = new JButton("Cancelar");
@@ -130,13 +133,85 @@ public class RegistroUsuario extends JFrame implements ActionListener {
 		cancelar.setFont(new Font("Dialog", Font.BOLD, 14));
 		cancelar.setForeground(Color.WHITE);
 		cancelar.setBackground(Color.RED);
-		cancelar.setBounds(460, 410, 117, 25);
+		cancelar.setBounds(232, 429, 117, 25);
 		contentPane.add(cancelar);
 		
-		JLabel Icono2 = new JLabel("");
-		Icono2.setIcon(new ImageIcon(RegistroUsuario.class.getResource("/com/AppFrontendPantallas/Imagenes/6247308225_6aedf3cbb3_b.jpg")));
-		Icono2.setBounds(-65, -50, 872, 551);
-		contentPane.add(Icono2);
+		JComboBox comboBox = new JComboBox();
+		comboBox.setBounds(295, 310, 170, 24);
+		comboBox.addItem("Telefono...");
+		comboBox.addItem("Telefono Personal");
+		comboBox.addItem("Telefono Celular");
+		comboBox.addItem("Telefono Laboral");
+
+		contentPane.add(comboBox);
+		
+		textField_5 = new JTextField();
+		textField_5.setColumns(10);
+		textField_5.setBounds(477, 313, 128, 19);
+		contentPane.add(textField_5);
+		
+		JLabel label = new JLabel("");
+		
+		JLabel label_1 = new JLabel("");
+		
+		JLabel label_2 = new JLabel("");
+		
+		JLabel label_3 = new JLabel("");
+		
+		JLabel label_4 = new JLabel("");
+		
+		JLabel label_5 = new JLabel("");
+		
+		JLabel label_6 = new JLabel("");
+		
+		JLabel Numero = new JLabel("Numero");
+		Numero.setForeground(Color.WHITE);
+		Numero.setBounds(22, 244, 70, 15);
+		contentPane.add(Numero);
+		
+		JLabel Categoria = new JLabel("Categoria");
+		Categoria.setForeground(Color.WHITE);
+		Categoria.setBounds(279, 244, 70, 15);
+		contentPane.add(Categoria);
+		
+		textField_6 = new JTextField();
+		textField_6.setColumns(10);
+		textField_6.setBounds(120, 240, 128, 19);
+		contentPane.add(textField_6);
+		
+		textField_7 = new JTextField();
+		textField_7.setColumns(10);
+		textField_7.setBounds(383, 242, 128, 19);
+		contentPane.add(textField_7);
+		
+		JComboBox aerolineacombo = new JComboBox();
+		aerolineacombo.setBounds(639, 239, 135, 24);
+		aerolineacombo.addItem("aerolineas...");
+		contentPane.add(aerolineacombo);
+		
+		JComboBox alianzacombo = new JComboBox();
+		alianzacombo.setBounds(120, 310, 128, 24);
+		alianzacombo.addItem("alianza...");
+		contentPane.add(alianzacombo);
+		
+		JLabel aerolineas = new JLabel("Aerolineas");
+		aerolineas.setForeground(Color.WHITE);
+		aerolineas.setBounds(543, 244, 117, 15);
+		contentPane.add(aerolineas);
+		
+		JLabel alianza = new JLabel("Alianza");
+		alianza.setForeground(Color.WHITE);
+		alianza.setBounds(22, 315, 70, 15);
+		contentPane.add(alianza);
+		
+		JCalendar calendar = new JCalendar();
+		calendar.setBounds(519, 39, 265, 159);
+		contentPane.add(calendar);
+		
+		JLabel icono = new JLabel("");
+		icono.setIcon(new ImageIcon(RegistroUsuario.class.getResource("/com/AppFrontendPantallas/Imagenes/6247308225_6aedf3cbb3_b.jpg")));
+		icono.setBounds(-77, -73, 898, 551);
+		contentPane.add(icono);
 	}
 
 
@@ -146,6 +221,12 @@ public class RegistroUsuario extends JFrame implements ActionListener {
 		if("Cancelar".equals(e.getActionCommand())) {
 			Loginprincipal principal = new Loginprincipal();
 			principal.setVisible(true);
+			this.dispose();
+		}
+		
+		else if("Continuar".equals(e.getActionCommand())){
+			RegistroUsuario2 registro2 = new RegistroUsuario2();
+			registro2.setVisible(true);
 			this.dispose();
 		}
 		

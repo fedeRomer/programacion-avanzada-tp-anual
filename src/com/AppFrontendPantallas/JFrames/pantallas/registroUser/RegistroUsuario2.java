@@ -15,6 +15,21 @@ import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JFormattedTextField;
+import java.awt.TextField;
+import javax.swing.JSlider;
+import javax.swing.JSpinner;
+import javax.swing.DropMode;
+import javax.swing.JTextPane;
+import javax.swing.JPopupMenu;
+import java.awt.Component;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import javax.swing.JComboBox;
+import javax.swing.JList;
+import com.toedter.calendar.JMonthChooser;
+import com.toedter.calendar.JYearChooser;
+import com.toedter.calendar.JDayChooser;
 
 public class RegistroUsuario2 extends JFrame implements ActionListener {
 
@@ -23,11 +38,10 @@ public class RegistroUsuario2 extends JFrame implements ActionListener {
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTextField textField_1;
-	private JTextField textField_2;
-	private JPasswordField passwordField;
-	private JPasswordField passwordField_1;
-	private JTextField textField_3;
 	private JTextField textField_4;
+	private JTextField textField_5;
+	private JTextField textField_2;
+	private JTextField textField_3;
 
 	
 	public RegistroUsuario2() {
@@ -40,102 +54,137 @@ public class RegistroUsuario2 extends JFrame implements ActionListener {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel nombre = new JLabel("Nombre");
-		nombre.setForeground(Color.WHITE);
+		JLabel nombre = new JLabel("Direccion");
 		nombre.setBounds(22, 12, 70, 15);
+		nombre.setForeground(Color.WHITE);
 		contentPane.add(nombre);
 		
 		textField = new JTextField();
-		textField.setBounds(120, 10, 128, 19);
+		textField.setBounds(110, 10, 128, 19);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
-		JLabel apellido = new JLabel("Apellido");
-		apellido.setForeground(Color.WHITE);
-		apellido.setBounds(323, 12, 70, 15);
-		contentPane.add(apellido);
-		
-		JLabel email = new JLabel("Email");
-		email.setForeground(Color.WHITE);
-		email.setBounds(22, 39, 70, 19);
-		contentPane.add(email);
-		
-		JLabel password = new JLabel("Password");
-		password.setForeground(Color.WHITE);
-		password.setBounds(22, 74, 70, 15);
-		contentPane.add(password);
+		JLabel altura = new JLabel("altura");
+		altura.setBounds(302, 12, 70, 15);
+		altura.setForeground(Color.WHITE);
+		contentPane.add(altura);
 		
 		textField_1 = new JTextField();
+		textField_1.setBounds(380, 10, 128, 19);
 		textField_1.setColumns(10);
-		textField_1.setBounds(411, 10, 128, 19);
 		contentPane.add(textField_1);
 		
-		JCalendar calendar = new JCalendar();
-		calendar.setBounds(22, 151, 253, 143);
-		contentPane.add(calendar);
+		JLabel password = new JLabel("Ciudad");
+		password.setBounds(557, 12, 70, 15);
+		password.setForeground(Color.WHITE);
+		contentPane.add(password);
 		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
-		textField_2.setBounds(120, 41, 128, 19);
-		contentPane.add(textField_2);
-		
-		passwordField = new JPasswordField();
-		passwordField.setBounds(120, 72, 128, 19);
-		contentPane.add(passwordField);
-		
-		JLabel retry = new JLabel("Retry");
+		JLabel retry = new JLabel("Provincia");
+		retry.setBounds(302, 77, 70, 19);
 		retry.setForeground(Color.WHITE);
-		retry.setBounds(323, 66, 70, 19);
 		contentPane.add(retry);
 		
-		passwordField_1 = new JPasswordField();
-		passwordField_1.setBounds(411, 72, 128, 19);
-		contentPane.add(passwordField_1);
-		
-		JLabel dni = new JLabel("Dni");
-		dni.setForeground(Color.WHITE);
-		dni.setBounds(323, 39, 70, 15);
-		contentPane.add(dni);
-		
-		textField_3 = new JTextField();
-		textField_3.setColumns(10);
-		textField_3.setBounds(411, 41, 128, 19);
-		contentPane.add(textField_3);
-		
-		JLabel cuit = new JLabel("Cuit/Cuil");
-		cuit.setForeground(Color.WHITE);
-		cuit.setBounds(22, 108, 70, 15);
-		contentPane.add(cuit);
+		JLabel codigo = new JLabel("Cod postal");
+		codigo.setBounds(22, 79, 94, 15);
+		codigo.setForeground(Color.WHITE);
+		contentPane.add(codigo);
 		
 		textField_4 = new JTextField();
+		textField_4.setBounds(631, 10, 128, 19);
 		textField_4.setColumns(10);
-		textField_4.setBounds(120, 103, 128, 19);
 		contentPane.add(textField_4);
-		
-		JLabel fecha = new JLabel("Fecha de nacimiento");
-		fecha.setForeground(Color.WHITE);
-		fecha.setBounds(22, 135, 159, 15);
-		contentPane.add(fecha);
 		
 		JButton continuar = new JButton("Continuar");
 		continuar.addActionListener(this);
+		continuar.setActionCommand("Continuar");
+		continuar.setBounds(372, 429, 117, 25);
 		continuar.setFont(new Font("Dialog", Font.BOLD, 14));
 		continuar.setForeground(Color.WHITE);
 		continuar.setBackground(new Color(0, 128, 0));
-		continuar.setBounds(648, 410, 117, 25);
 		contentPane.add(continuar);
 		
 		JButton cancelar = new JButton("Cancelar");
 		cancelar.addActionListener(this);
+		cancelar.setActionCommand("Cancelar");
+		cancelar.setBounds(642, 429, 117, 25);
 		cancelar.setFont(new Font("Dialog", Font.BOLD, 14));
 		cancelar.setForeground(Color.WHITE);
 		cancelar.setBackground(Color.RED);
-		cancelar.setBounds(460, 410, 117, 25);
 		contentPane.add(cancelar);
 		
+		textField_5 = new JTextField();
+		textField_5.setColumns(10);
+		textField_5.setBounds(110, 77, 128, 19);
+		contentPane.add(textField_5);
+		
+		JComboBox<String> comboBox = new JComboBox<String>();
+		comboBox.setFont(new Font("Dialog", Font.BOLD, 12));
+		comboBox.setBounds(631, 77, 128, 19);
+		comboBox.addItem("telefono");
+		comboBox.addItem("telofono personal");
+		comboBox.addItem("telofono celular");
+		comboBox.addItem("telofono laboral");
+		contentPane.add(comboBox);
+		
+		JComboBox<String> comboBox_1 = new JComboBox<String>();
+		comboBox_1.setFont(new Font("Dialog", Font.BOLD, 12));
+		comboBox_1.setBounds(380, 77, 128, 19);
+		contentPane.add(comboBox_1);
+		
+		JLabel Pais = new JLabel("Pais");
+		Pais.setForeground(Color.WHITE);
+		Pais.setBounds(557, 77, 70, 19);
+		contentPane.add(Pais);
+		
+		JButton volver = new JButton("Volver");
+		volver.addActionListener(this);
+		volver.setForeground(Color.WHITE);
+		volver.setFont(new Font("Dialog", Font.BOLD, 14));
+		volver.setBackground(Color.BLUE);
+		volver.setBounds(206, 429, 117, 25);
+		contentPane.add(volver);
+		
+		JLabel numpasaporte = new JLabel("Numero de pasaporte");
+		numpasaporte.setForeground(Color.WHITE);
+		numpasaporte.setBounds(22, 141, 155, 15);
+		contentPane.add(numpasaporte);
+		
+		textField_2 = new JTextField();
+		textField_2.setColumns(10);
+		textField_2.setBounds(195, 139, 128, 19);
+		contentPane.add(textField_2);
+		
+		JLabel lblAutoridadDeEmision = new JLabel("Autoridad de emision");
+		lblAutoridadDeEmision.setForeground(Color.WHITE);
+		lblAutoridadDeEmision.setBounds(411, 141, 154, 15);
+		contentPane.add(lblAutoridadDeEmision);
+		
+		textField_3 = new JTextField();
+		textField_3.setColumns(10);
+		textField_3.setBounds(583, 139, 128, 19);
+		contentPane.add(textField_3);
+		
+		JLabel emision = new JLabel("Fecha de emision");
+		emision.setForeground(Color.WHITE);
+		emision.setBounds(22, 193, 155, 15);
+		contentPane.add(emision);
+		
+		JLabel vencimiento = new JLabel("Fecha de vencimiento");
+		vencimiento.setForeground(Color.WHITE);
+		vencimiento.setBounds(411, 193, 154, 15);
+		contentPane.add(vencimiento);
+		
+		JCalendar calendario1 = new JCalendar();
+		calendario1.setBounds(409, 220, 265, 159);
+		contentPane.add(calendario1);
+		
+		JCalendar calendar2 = new JCalendar();
+		calendar2.setBounds(22, 220, 265, 159);
+		contentPane.add(calendar2);
+		
 		JLabel Icono2 = new JLabel("");
+		Icono2.setBounds(-48, -45, 872, 551);
 		Icono2.setIcon(new ImageIcon(RegistroUsuario.class.getResource("/com/AppFrontendPantallas/Imagenes/6247308225_6aedf3cbb3_b.jpg")));
-		Icono2.setBounds(-65, -50, 872, 551);
 		contentPane.add(Icono2);
 	}
 
@@ -148,7 +197,12 @@ public class RegistroUsuario2 extends JFrame implements ActionListener {
 			principal.setVisible(true);
 			this.dispose();
 		}
-		
+		else if("Volver".equals(e.getActionCommand())) {
+			RegistroUsuario registro1 = new RegistroUsuario();
+			registro1.setVisible(true);
+			this.dispose();
+						
+		}
 		
 				
 	}

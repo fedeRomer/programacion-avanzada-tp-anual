@@ -6,11 +6,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-
 import com.AppFrontendPantallas.JFrames.pantallas.registroUser.RegistroUsuario;
 
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
 public class Loginprincipal extends JFrame implements ActionListener {
 
