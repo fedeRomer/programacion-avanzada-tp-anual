@@ -1,28 +1,66 @@
 package com.AppBackend.dao.daoImplementations;
+
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.AppBackend.dao.daoInterfaces.ClienteDAO;
 import com.AppBackend.domain.Cliente;
 import com.AppBackend.exceptions.NoSuchIdException;
+import com.AppBackend.utils.ConexionDB.ThrowQueryByString;
 
-public class ClienteDAOimpl implements ClienteDAO{
+public class ClienteDAOimpl implements ClienteDAO {
 
 	@Override
 	public void addCliente(Cliente cliente) {
-		// TODO Auto-generated method stub
-		
+		try {
+			String query = "insert into...T";
+			ThrowQueryByString t = new ThrowQueryByString();
+			ResultSet rs = t.exec(query);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
-
 
 	@Override
 	public void deleteCliente(int idUsuario) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public List<Cliente> findAllCliente() {
-		// TODO Auto-generated method stub
+		List<Cliente> clientes = new ArrayList<Cliente>();
+		try {
+			String query = "SELECT * FROM CLIENTE";
+			ThrowQueryByString t = new ThrowQueryByString();
+			ResultSet rs = t.exec(query);
+			ResultSetMetaData rsmd = rs.getMetaData();
+			int columnsNumber = rsmd.getColumnCount();
+			while (rs.next()) {
+				for (int i = 1; i <= columnsNumber; i++) {
+
+					Cliente tempBo = new Cliente();
+					tempBo.setIdCliente(rs.getInt("id_cliente"));
+					tempBo.setNombreCompleto(rs.getString("nombre") + " " + rs.getString("Apellido"));
+					tempBo.setDni(rs.getInt("dni"));
+					tempBo.setCuilCuit(rs.getString("cuil"));
+					tempBo.setFechaNacimiento(rs.getDate("fecha_nacimiento"));
+					tempBo.setMail(rs.getString("email"));
+					/*
+					 * agregar Pasaporte pasaporte en pojo cliente
+					 * aca realizar tempBo.setPasaporte.setIdpasaporte(rs.getint
+					 */
+					clientes.add(tempBo);
+				}
+				System.out.println("\n");
+			}
+			
+			return clientes;
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 		return null;
 	}
 
@@ -32,9 +70,9 @@ public class ClienteDAOimpl implements ClienteDAO{
 		return null;
 	}
 
-
 	@Override
 	public Cliente updateCliente(Cliente usuario) {
 		// TODO Auto-generated method stub
 		return null;
-	}}
+	}
+}
