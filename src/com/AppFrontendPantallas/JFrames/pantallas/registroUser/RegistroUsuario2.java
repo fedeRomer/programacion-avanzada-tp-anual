@@ -9,7 +9,7 @@ import java.awt.Color;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 
-import com.AppFrontendPantallas.JFrames.pantallas.Login.Loginprincipal;
+import com.AppFrontendPantallas.JFrames.pantallas.login.Loginprincipal;
 import com.toedter.calendar.JCalendar;
 import javax.swing.JButton;
 import java.awt.Font;
@@ -202,6 +202,10 @@ public class RegistroUsuario2 extends JFrame implements ActionListener {
 			registro1.setVisible(true);
 			this.dispose();
 						
+		}else {
+			RegistroUsuario3 registro3 = new RegistroUsuario3();
+			registro3.setVisible(true);
+			this.dispose();
 		}
 		
 				

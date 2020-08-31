@@ -1,4 +1,4 @@
-package com.AppFrontendPantallas.JFrames.pantallas.Login;
+package com.AppFrontendPantallas.JFrames.pantallas.login;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+import com.AppFrontendPantallas.JFrames.pantallas.admin.Menuadm;
 import com.AppFrontendPantallas.JFrames.pantallas.registroUser.RegistroUsuario;
 
 
@@ -16,11 +17,12 @@ public class Loginprincipal extends JFrame implements ActionListener {
 	 */
 	private static final long serialVersionUID = 1L;
 	private JPanel panel;
-    private JTextField textField;
-    private JPasswordField password;
+    private JTextField ingresonombre;
+    private JPasswordField ingresopassword;
     private JButton btnLogin;
     private JButton btnRegistrarse;   
-    
+    private String usuariohelper;
+    private String passhelper;
     
 	public Loginprincipal() {
 		
@@ -42,33 +44,33 @@ public class Loginprincipal extends JFrame implements ActionListener {
 		JLabel Usernametext = new JLabel("User name");
 		Usernametext.setFont(new Font("Dialog", Font.BOLD, 20));
 		Usernametext.setForeground(Color.WHITE);
-		Usernametext.setBounds(202, 47, 167, 25);
+		Usernametext.setBounds(216, 27, 167, 25);
 		panel.add(Usernametext);}
 	
 	public void ingresoname() {
-		textField = new JTextField();
-		textField.setForeground(Color.WHITE);
-		textField.setBackground(Color.GRAY);
-		textField.setBounds(202, 82, 167, 25);
-		panel.add(textField);
-		textField.setColumns(10);
+		ingresonombre = new JTextField();
+		ingresonombre.setForeground(Color.WHITE);
+		ingresonombre.setBackground(Color.GRAY);
+		ingresonombre.setBounds(216, 64, 167, 25);
+		panel.add(ingresonombre);
+		ingresonombre.setColumns(10);
 	}
 	
 	public void Textpass(){	
 		JLabel passwordtext = new JLabel("Password");
 		passwordtext.setForeground(Color.WHITE);
 		passwordtext.setFont(new Font("Dialog", Font.BOLD, 20));
-		passwordtext.setBounds(202, 162, 167, 25);
+		passwordtext.setBounds(216, 120, 167, 25);
 		panel.add(passwordtext);
 		}
 	
 	public void ingresopass() { 	
-		password = new JPasswordField();
-		password.setFont(new Font("Dialog", Font.PLAIN, 14));
-		password.setForeground(Color.WHITE);
-		password.setBackground(new Color(128, 128, 128));
-		password.setBounds(202, 203, 167, 25);
-		panel.add(password);}
+		ingresopassword = new JPasswordField();
+		ingresopassword.setFont(new Font("Dialog", Font.PLAIN, 14));
+		ingresopassword.setForeground(Color.WHITE);
+		ingresopassword.setBackground(new Color(128, 128, 128));
+		ingresopassword.setBounds(216, 157, 167, 25);
+		panel.add(ingresopassword);}
    
 	public void Botonlogin() {
 		btnLogin = new JButton("Login");
@@ -76,7 +78,7 @@ public class Loginprincipal extends JFrame implements ActionListener {
 		btnLogin.setForeground(new Color(255, 255, 255));
 		btnLogin.setBackground(new Color(0, 255, 0));
 		btnLogin.setFont(new Font("Dialog", Font.BOLD, 18));
-		btnLogin.setBounds(368, 323, 117, 25);
+		btnLogin.setBounds(216, 245, 167, 25);
 		panel.add(btnLogin);
 		}
 	
@@ -87,7 +89,7 @@ public class Loginprincipal extends JFrame implements ActionListener {
 		btnRegistrarse.setForeground(new Color(255, 255, 255));
 		btnRegistrarse.setBackground(new Color(0, 0, 255));
 		btnRegistrarse.setFont(new Font("Dialog", Font.BOLD, 18));	
-		btnRegistrarse.setBounds(107, 323, 152, 25);
+		btnRegistrarse.setBounds(434, 336, 152, 25);
 		panel.add(btnRegistrarse);}
 	
 	
@@ -117,6 +119,8 @@ public class Loginprincipal extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
+		usuariohelper = ingresonombre.getText();
+		passhelper = ingresopassword.getText();
 		
 		if("Registrarse".equals(e.getActionCommand())) {
 			RegistroUsuario registro = new RegistroUsuario();
@@ -124,10 +128,15 @@ public class Loginprincipal extends JFrame implements ActionListener {
 			this.dispose();
 		}
 		
-		else if ("Login".equals(e.getActionCommand())) {
-			  
-			System.out.println("Login");
+		else if (usuariohelper.equals("admin") && passhelper.equals("123")) {		    	
+	    	JOptionPane.showMessageDialog(null,"bienvenido " + usuariohelper);
+		    Menuadm admin = new Menuadm();
+		    admin.setVisible(true);
+		    this.dispose();
+				
+			 }
+	    else { JOptionPane.showMessageDialog(null, "Datos incorrectos \nvuelva a intentarlo","Error",JOptionPane.ERROR_MESSAGE); }
+			
 		   
 		} 		
 	}
-}

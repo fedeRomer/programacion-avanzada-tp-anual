@@ -1,9 +1,9 @@
-package com.AppFrontendPantallas.JFrames.Pruebas;
+package com.AppFrontendPantallas.JFrames.pruebas;
 
 public class TableHelper {
 
 	public static String[] getColumnNames() {
-		return new String[] {"Nombre", "Apellido", "Pasatiempo", "A�os Practica", "Soltero/a"};
+		return new String[] {"Nombre", "Apellido", "Pasatiempo", "Años Practica", "Soltero/a"};
 	}
 	
 	public static Object[][] getData() {

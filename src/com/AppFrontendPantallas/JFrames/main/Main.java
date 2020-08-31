@@ -2,7 +2,7 @@ package com.AppFrontendPantallas.JFrames.main;
 
 import java.awt.EventQueue;
 
-import com.AppFrontendPantallas.JFrames.pantallas.Login.Loginprincipal;
+import com.AppFrontendPantallas.JFrames.pantallas.login.Loginprincipal;
 
 
 public class Main {

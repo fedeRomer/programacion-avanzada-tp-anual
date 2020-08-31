@@ -1,25 +1,20 @@
-package com.AppFrontendPantallas.JFrames.Pruebas;
+package com.AppFrontendPantallas.JFrames.pruebas;
 
-import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import java.awt.EventQueue;
-import java.awt.FlowLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
-import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
-
-
 
 public class JTableExample extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTable tabla;
 	private JScrollPane scroll;
@@ -51,7 +46,6 @@ public class JTableExample extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(new CardLayout(0, 0));
 		this.initTable(true);
-		this.initTable(false);
 	}
 	
 	private void initTable(boolean withScroll) {
