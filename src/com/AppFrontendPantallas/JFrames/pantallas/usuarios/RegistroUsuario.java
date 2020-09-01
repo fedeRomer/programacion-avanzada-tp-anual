@@ -1,15 +1,17 @@
-package com.AppFrontendPantallas.JFrames.pantallas.registroUser;
+package com.AppFrontendPantallas.JFrames.pantallas.usuarios;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 
 import com.AppFrontendPantallas.JFrames.pantallas.login.Loginprincipal;
+import com.AppFrontendPantallas.util.Util;
 import com.toedter.calendar.JCalendar;
 import javax.swing.JButton;
 import java.awt.Font;
@@ -25,16 +27,16 @@ public class RegistroUsuario extends JFrame implements ActionListener {
 	
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JPasswordField passwordField;
-	private JPasswordField passwordField_1;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JTextField textField_5;
-	private JTextField textField_6;
-	private JTextField textField_7;
+	private JTextField innombre;
+	private JTextField inapellido;
+	private JTextField inemail;
+	private JPasswordField inpass;
+	private JPasswordField inretry;
+	private JTextField indni;
+	private JTextField incuit;
+	private JTextField intelefono;
+	private JTextField innumero;
+	private JTextField incategoria;
 
 	
 	public RegistroUsuario() {
@@ -52,11 +54,11 @@ public class RegistroUsuario extends JFrame implements ActionListener {
 		nombre.setBounds(22, 12, 70, 15);
 		contentPane.add(nombre);
 		
-		textField = new JTextField();
-		textField.setBounds(120, 10, 128, 19);
-		contentPane.add(textField);
-		textField.setColumns(10);
-		
+		innombre = new JTextField();
+		innombre.setBounds(120, 10, 128, 19);
+		contentPane.add(innombre);
+		innombre.setColumns(10);
+				
 		JLabel apellido = new JLabel("Apellido");
 		apellido.setForeground(Color.WHITE);
 		apellido.setBounds(22, 62, 70, 15);
@@ -72,48 +74,48 @@ public class RegistroUsuario extends JFrame implements ActionListener {
 		password.setBounds(22, 107, 70, 15);
 		contentPane.add(password);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(120, 60, 128, 19);
-		contentPane.add(textField_1);
+		inapellido = new JTextField();
+		inapellido.setColumns(10);
+		inapellido.setBounds(120, 60, 128, 19);
+		contentPane.add(inapellido);
 		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
-		textField_2.setBounds(360, 105, 128, 19);
-		contentPane.add(textField_2);
+		inemail = new JTextField();
+		inemail.setColumns(10);
+		inemail.setBounds(360, 105, 128, 19);
+		contentPane.add(inemail);
 		
-		passwordField = new JPasswordField();
-		passwordField.setBounds(120, 105, 128, 19);
-		contentPane.add(passwordField);
+		inpass = new JPasswordField();
+		inpass.setBounds(120, 105, 128, 19);
+		contentPane.add(inpass);
 		
 		JLabel retry = new JLabel("Retry");
 		retry.setForeground(Color.WHITE);
 		retry.setBounds(295, 60, 70, 19);
 		contentPane.add(retry);
 		
-		passwordField_1 = new JPasswordField();
-		passwordField_1.setBounds(360, 60, 128, 19);
-		contentPane.add(passwordField_1);
+		inretry = new JPasswordField();
+		inretry.setBounds(360, 60, 128, 19);
+		contentPane.add(inretry);
 		
 		JLabel dni = new JLabel("Dni");
 		dni.setForeground(Color.WHITE);
 		dni.setBounds(295, 12, 70, 15);
 		contentPane.add(dni);
 		
-		textField_3 = new JTextField();
-		textField_3.setColumns(10);
-		textField_3.setBounds(360, 10, 128, 19);
-		contentPane.add(textField_3);
+		indni = new JTextField();
+		indni.setColumns(10);
+		indni.setBounds(360, 10, 128, 19);
+		contentPane.add(indni);
 		
 		JLabel cuit = new JLabel("Cuit/Cuil");
 		cuit.setForeground(Color.WHITE);
 		cuit.setBounds(22, 167, 70, 15);
 		contentPane.add(cuit);
 		
-		textField_4 = new JTextField();
-		textField_4.setColumns(10);
-		textField_4.setBounds(120, 165, 128, 19);
-		contentPane.add(textField_4);
+		incuit = new JTextField();
+		incuit.setColumns(10);
+		incuit.setBounds(120, 165, 128, 19);
+		contentPane.add(incuit);
 		
 		JLabel fecha = new JLabel("Fecha de nacimiento");
 		fecha.setForeground(Color.WHITE);
@@ -142,27 +144,12 @@ public class RegistroUsuario extends JFrame implements ActionListener {
 		comboBox.addItem("Telefono Personal");
 		comboBox.addItem("Telefono Celular");
 		comboBox.addItem("Telefono Laboral");
-
 		contentPane.add(comboBox);
 		
-		textField_5 = new JTextField();
-		textField_5.setColumns(10);
-		textField_5.setBounds(477, 313, 128, 19);
-		contentPane.add(textField_5);
-		
-		JLabel label = new JLabel("");
-		
-		JLabel label_1 = new JLabel("");
-		
-		JLabel label_2 = new JLabel("");
-		
-		JLabel label_3 = new JLabel("");
-		
-		JLabel label_4 = new JLabel("");
-		
-		JLabel label_5 = new JLabel("");
-		
-		JLabel label_6 = new JLabel("");
+		intelefono = new JTextField();
+		intelefono.setColumns(10);
+		intelefono.setBounds(477, 313, 128, 19);
+		contentPane.add(intelefono);
 		
 		JLabel Numero = new JLabel("Numero");
 		Numero.setForeground(Color.WHITE);
@@ -174,15 +161,15 @@ public class RegistroUsuario extends JFrame implements ActionListener {
 		Categoria.setBounds(279, 244, 70, 15);
 		contentPane.add(Categoria);
 		
-		textField_6 = new JTextField();
-		textField_6.setColumns(10);
-		textField_6.setBounds(120, 240, 128, 19);
-		contentPane.add(textField_6);
+		innumero = new JTextField();
+		innumero.setColumns(10);
+		innumero.setBounds(120, 240, 128, 19);
+		contentPane.add(innumero);
 		
-		textField_7 = new JTextField();
-		textField_7.setColumns(10);
-		textField_7.setBounds(383, 242, 128, 19);
-		contentPane.add(textField_7);
+		incategoria = new JTextField();
+		incategoria.setColumns(10);
+		incategoria.setBounds(383, 242, 128, 19);
+		contentPane.add(incategoria);
 		
 		JComboBox aerolineacombo = new JComboBox();
 		aerolineacombo.setBounds(639, 239, 135, 24);
@@ -211,12 +198,16 @@ public class RegistroUsuario extends JFrame implements ActionListener {
 		JLabel icono = new JLabel("");
 		icono.setIcon(new ImageIcon(RegistroUsuario.class.getResource("/com/AppFrontendPantallas/Imagenes/6247308225_6aedf3cbb3_b.jpg")));
 		icono.setBounds(-77, -73, 898, 551);
-		contentPane.add(icono);
+	    contentPane.add(icono);
+	
 	}
 
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		
+	 RegistroUsuario2 registro2 = new RegistroUsuario2();
+	 
 		
 		if("Cancelar".equals(e.getActionCommand())) {
 			Loginprincipal principal = new Loginprincipal();
@@ -224,13 +215,11 @@ public class RegistroUsuario extends JFrame implements ActionListener {
 			this.dispose();
 		}
 		
-		else if("Continuar".equals(e.getActionCommand())){
-			RegistroUsuario2 registro2 = new RegistroUsuario2();
+		if("Continuar".equals(e.getActionCommand())){
 			registro2.setVisible(true);
-			this.dispose();
+            this.dispose();}
+			
+		  }
 		}
-		
-		
-				
-	}
-}
+
+

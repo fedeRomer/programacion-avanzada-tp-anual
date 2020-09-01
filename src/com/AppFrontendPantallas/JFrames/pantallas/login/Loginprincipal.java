@@ -6,8 +6,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import com.AppFrontendPantallas.JFrames.pantallas.admin.Menuadm;
-import com.AppFrontendPantallas.JFrames.pantallas.registroUser.RegistroUsuario;
+
+import com.AppFrontendPantallas.JFrames.pantallas.administrador.Menuadmin1;
+import com.AppFrontendPantallas.JFrames.pantallas.usuarios.MenuUsuario;
+import com.AppFrontendPantallas.JFrames.pantallas.usuarios.RegistroUsuario;
 
 
 public class Loginprincipal extends JFrame implements ActionListener {
@@ -52,8 +54,8 @@ public class Loginprincipal extends JFrame implements ActionListener {
 		ingresonombre.setForeground(Color.WHITE);
 		ingresonombre.setBackground(Color.GRAY);
 		ingresonombre.setBounds(216, 64, 167, 25);
-		panel.add(ingresonombre);
 		ingresonombre.setColumns(10);
+		panel.add(ingresonombre);
 	}
 	
 	public void Textpass(){	
@@ -130,11 +132,18 @@ public class Loginprincipal extends JFrame implements ActionListener {
 		
 		else if (usuariohelper.equals("admin") && passhelper.equals("123")) {		    	
 	    	JOptionPane.showMessageDialog(null,"bienvenido " + usuariohelper);
-		    Menuadm admin = new Menuadm();
+		    Menuadmin1 admin = new Menuadmin1();
 		    admin.setVisible(true);
 		    this.dispose();
 				
 			 }
+		else if(usuariohelper.equals("usuario") && passhelper.equals("456")){
+		    	MenuUsuario menuser = new MenuUsuario();
+		    	menuser.setVisible(true);
+		    	this.dispose();
+		 	 
+		}
+		
 	    else { JOptionPane.showMessageDialog(null, "Datos incorrectos \nvuelva a intentarlo","Error",JOptionPane.ERROR_MESSAGE); }
 			
 		   

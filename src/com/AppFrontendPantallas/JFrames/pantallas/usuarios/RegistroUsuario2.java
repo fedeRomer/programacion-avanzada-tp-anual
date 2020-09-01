@@ -1,35 +1,26 @@
-package com.AppFrontendPantallas.JFrames.pantallas.registroUser;
+package com.AppFrontendPantallas.JFrames.pantallas.usuarios;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.ComboBoxEditor;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 import javax.swing.JTextField;
-import javax.swing.JPasswordField;
-
 import com.AppFrontendPantallas.JFrames.pantallas.login.Loginprincipal;
 import com.toedter.calendar.JCalendar;
 import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JFormattedTextField;
-import java.awt.TextField;
-import javax.swing.JSlider;
-import javax.swing.JSpinner;
-import javax.swing.DropMode;
-import javax.swing.JTextPane;
-import javax.swing.JPopupMenu;
-import java.awt.Component;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
 import javax.swing.JComboBox;
-import javax.swing.JList;
-import com.toedter.calendar.JMonthChooser;
-import com.toedter.calendar.JYearChooser;
-import com.toedter.calendar.JDayChooser;
+
 
 public class RegistroUsuario2 extends JFrame implements ActionListener {
 
@@ -42,9 +33,9 @@ public class RegistroUsuario2 extends JFrame implements ActionListener {
 	private JTextField textField_5;
 	private JTextField textField_2;
 	private JTextField textField_3;
-
 	
-	public RegistroUsuario2() {
+	public RegistroUsuario2(){
+		
 		setResizable(false);
 		setTitle("Registro de Usuario");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -79,10 +70,10 @@ public class RegistroUsuario2 extends JFrame implements ActionListener {
 		password.setForeground(Color.WHITE);
 		contentPane.add(password);
 		
-		JLabel retry = new JLabel("Provincia");
-		retry.setBounds(302, 77, 70, 19);
-		retry.setForeground(Color.WHITE);
-		contentPane.add(retry);
+		JLabel provincia = new JLabel("Provincia");
+		provincia.setBounds(302, 77, 70, 19);
+		provincia.setForeground(Color.WHITE);
+		contentPane.add(provincia);
 		
 		JLabel codigo = new JLabel("Cod postal");
 		codigo.setBounds(22, 79, 94, 15);
@@ -126,10 +117,10 @@ public class RegistroUsuario2 extends JFrame implements ActionListener {
 		comboBox.addItem("telofono laboral");
 		contentPane.add(comboBox);
 		
-		JComboBox<String> comboBox_1 = new JComboBox<String>();
-		comboBox_1.setFont(new Font("Dialog", Font.BOLD, 12));
-		comboBox_1.setBounds(380, 77, 128, 19);
-		contentPane.add(comboBox_1);
+		JComboBox<String> comboprovincia = new JComboBox<String>();
+		comboprovincia.setFont(new Font("Dialog", Font.BOLD, 12));
+		comboprovincia.setBounds(380, 77, 128, 19);
+		contentPane.add(comboprovincia);
 		
 		JLabel Pais = new JLabel("Pais");
 		Pais.setForeground(Color.WHITE);
@@ -207,7 +198,6 @@ public class RegistroUsuario2 extends JFrame implements ActionListener {
 			registro3.setVisible(true);
 			this.dispose();
 		}
-		
-				
 	}
+				
 }
