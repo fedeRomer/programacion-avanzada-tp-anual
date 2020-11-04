@@ -1,11 +1,19 @@
 package com.AppBackend.dao.daoImplementations;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
 import java.util.List;
 
 import com.AppBackend.dao.daoInterfaces.VuelosDAO;
 import com.AppBackend.domain.Vuelo;
+import com.mysql.cj.jdbc.CallableStatement;
 public class VuelosDAOimpl implements VuelosDAO{
-
+	private PreparedStatement preparedStatement;
+	private CallableStatement callableStatement;
+	private String query;
+	private Connection connection;
+	private Statement statement;
 	@Override
 	public void addVuelo(Vuelo vuelo) {
 		

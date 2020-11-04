@@ -1,7 +1,10 @@
 package com.AppBackend.dao.daoImplementations;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,9 +12,14 @@ import com.AppBackend.dao.daoInterfaces.ClienteDAO;
 import com.AppBackend.domain.Cliente;
 import com.AppBackend.exceptions.NoSuchIdException;
 import com.AppBackend.utils.ConexionDB.ThrowQueryByString;
+import com.mysql.cj.jdbc.CallableStatement;
 
 public class ClienteDAOimpl implements ClienteDAO {
-
+	private PreparedStatement preparedStatement;
+	private CallableStatement callableStatement;
+	private String query;
+	private Connection connection;
+	private Statement statement;
 	@Override
 	public void addCliente(Cliente cliente) {
 		try {
