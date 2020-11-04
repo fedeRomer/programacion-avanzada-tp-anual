@@ -30,20 +30,19 @@ public class RegistroUsuario3 extends JFrame implements ActionListener{
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		JButton Continuar = new JButton("Menu principal");
+		JButton Continuar = new JButton("Menu Usuario");
 		Continuar.addActionListener(this);
-		Continuar.setBounds(269, 384, 185, 44);
+		Continuar.setBounds(301, 375, 185, 44);
 		contentPane.setLayout(null);
 		Continuar.setFont(new Font("Dialog", Font.BOLD, 16));
 		Continuar.setForeground(Color.WHITE);
 		Continuar.setBackground(new Color(0, 128, 0));
 		contentPane.add(Continuar);
 		
-		JLabel lblNewLabel_1 = new JLabel("Registro con exito !!!"
-				+ " vuelva al menu principal para logearse");
+		JLabel lblNewLabel_1 = new JLabel("Registro con exito !!!");
 		lblNewLabel_1.setFont(new Font("Dialog", Font.BOLD, 20));
 		lblNewLabel_1.setForeground(new Color(255, 250, 250));
-		lblNewLabel_1.setBounds(49, 22, 723, 99);
+		lblNewLabel_1.setBounds(257, 40, 272, 99);
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel Menu = new JLabel("");
@@ -56,9 +55,9 @@ public class RegistroUsuario3 extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
-		if("Menu principal".equals(e.getActionCommand())) {
-			Loginprincipal principal = new Loginprincipal();
-			principal.setVisible(true);
+		if("Menu Usuario".equals(e.getActionCommand())) {
+			MenuUsuario menuuser = new MenuUsuario();
+			menuuser.setVisible(true);
 			this.dispose();}
 		
 			else{

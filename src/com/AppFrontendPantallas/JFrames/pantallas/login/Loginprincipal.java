@@ -9,6 +9,7 @@ import javax.swing.border.EmptyBorder;
 
 import com.AppFrontendPantallas.JFrames.pantallas.administrador.Menuadmin1;
 import com.AppFrontendPantallas.JFrames.pantallas.usuarios.MenuUsuario;
+import com.AppFrontendPantallas.JFrames.pantallas.usuarios.Registro;
 import com.AppFrontendPantallas.JFrames.pantallas.usuarios.RegistroUsuario;
 
 
@@ -125,7 +126,7 @@ public class Loginprincipal extends JFrame implements ActionListener {
 		passhelper = ingresopassword.getText();
 		
 		if("Registrarse".equals(e.getActionCommand())) {
-			RegistroUsuario registro = new RegistroUsuario();
+			Registro registro = new Registro();
 			registro.setVisible(true);
 			this.dispose();
 		}
@@ -138,8 +139,8 @@ public class Loginprincipal extends JFrame implements ActionListener {
 				
 			 }
 		else if(usuariohelper.equals("usuario") && passhelper.equals("456")){
-		    	MenuUsuario menuser = new MenuUsuario();
-		    	menuser.setVisible(true);
+		    	RegistroUsuario registro1= new RegistroUsuario();
+		    	registro1.setVisible(true);
 		    	this.dispose();
 		 	 
 		}
