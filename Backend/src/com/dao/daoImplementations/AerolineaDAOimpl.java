@@ -9,12 +9,12 @@ import java.util.List;
 import com.dao.daoInterfaces.AerolineaDAO;
 import com.domain.Aerolinea;
 import com.exceptions.NoSuchIdException;
-import com.utils.ConexionDB.MySQL;
 import com.mysql.cj.jdbc.CallableStatement;
+import com.utils.ConexionDB.MySQL;
 
 public class AerolineaDAOimpl implements AerolineaDAO{
 	private PreparedStatement preparedStatement;
-	//private CallableStatement callableStatement;
+	private CallableStatement callableStatement;
 	private String query;
 	private Connection connection;
 	private Statement statement;

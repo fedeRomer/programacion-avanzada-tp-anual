@@ -10,7 +10,7 @@ import com.mysql.cj.jdbc.CallableStatement;
 
 public class VentasDAOimpl implements VentasDAO {
 	private PreparedStatement preparedStatement;
-	//private CallableStatement callableStatement;
+	private CallableStatement callableStatement;
 	private String query;
 	private Connection connection;
 	private Statement statement;

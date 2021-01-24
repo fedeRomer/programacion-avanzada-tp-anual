@@ -1,4 +1,4 @@
-package com.AppFrontendPantallas.JFrames.pantallas.administrador;
+package JFrames.pantallas.administrador;
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.border.EmptyBorder;
 
-import com.AppFrontendPantallas.JFrames.pantallas.login.Loginprincipal;
+import JFrames.pantallas.login.Loginprincipal;
 
 public class Menuadmin1 extends JFrame implements ActionListener{
 

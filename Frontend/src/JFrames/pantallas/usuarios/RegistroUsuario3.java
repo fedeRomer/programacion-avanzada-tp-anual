@@ -1,4 +1,4 @@
-package com.AppFrontendPantallas.JFrames.pantallas.usuarios;
+package JFrames.pantallas.usuarios;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -11,7 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import com.AppFrontendPantallas.JFrames.pantallas.login.Loginprincipal;
+import JFrames.pantallas.login.Loginprincipal;
 
 
 public class RegistroUsuario3 extends JFrame implements ActionListener{

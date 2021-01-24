@@ -1,4 +1,4 @@
-package com.AppFrontendPantallas.JFrames.pantallas.login;
+package JFrames.pantallas.login;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -7,10 +7,10 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
-import com.AppFrontendPantallas.JFrames.pantallas.administrador.Menuadmin1;
-import com.AppFrontendPantallas.JFrames.pantallas.usuarios.MenuUsuario;
-import com.AppFrontendPantallas.JFrames.pantallas.usuarios.Registro;
-import com.AppFrontendPantallas.JFrames.pantallas.usuarios.RegistroUsuario;
+import JFrames.pantallas.administrador.Menuadmin1;
+import JFrames.pantallas.usuarios.MenuUsuario;
+//import JFrames.pantallas.usuarios.Registro;
+import JFrames.pantallas.usuarios.RegistroUsuario;
 
 
 public class Loginprincipal extends JFrame implements ActionListener {

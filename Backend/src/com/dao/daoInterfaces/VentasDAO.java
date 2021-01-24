@@ -1,8 +1,8 @@
 package com.dao.daoInterfaces;
 import java.util.List;
 
-import com.exceptions.NoSuchIdException;
 import com.domain.Venta;
+import com.exceptions.NoSuchIdException;
 
 public interface VentasDAO {
 	

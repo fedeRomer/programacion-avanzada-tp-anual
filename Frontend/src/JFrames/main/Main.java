@@ -1,8 +1,8 @@
-package com.AppFrontendPantallas.JFrames.main;
+package JFrames.main;
 
 import java.awt.EventQueue;
 
-import com.AppFrontendPantallas.JFrames.pantallas.login.Loginprincipal;
+import JFrames.pantallas.login.Loginprincipal;
 
 
 public class Main {

@@ -11,12 +11,12 @@ import java.util.List;
 import com.dao.daoInterfaces.ClienteDAO;
 import com.domain.Cliente;
 import com.exceptions.NoSuchIdException;
-import com.utils.ConexionDB.ThrowQueryByString;
 import com.mysql.cj.jdbc.CallableStatement;
+import com.utils.ConexionDB.ThrowQueryByString;
 
 public class ClienteDAOimpl implements ClienteDAO {
 	private PreparedStatement preparedStatement;
-	//private CallableStatement callableStatement;
+	private CallableStatement callableStatement;
 	private String query;
 	private Connection connection;
 	private Statement statement;

@@ -1,4 +1,4 @@
-package com.AppFrontendPantallas.JFrames.pantallas.usuarios;
+package JFrames.pantallas.usuarios;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -10,8 +10,8 @@ import java.awt.Color;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 
-import com.AppFrontendPantallas.JFrames.pantallas.login.Loginprincipal;
-import com.AppFrontendPantallas.util.Util;
+import JFrames.pantallas.login.Loginprincipal;
+import util.Util;
 import com.toedter.calendar.JCalendar;
 import javax.swing.JButton;
 import java.awt.Font;

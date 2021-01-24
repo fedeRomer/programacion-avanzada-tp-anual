@@ -1,4 +1,4 @@
-package com.AppFrontendPantallas.JFrames.pruebas;
+package JFrames.pruebas;
 
 import java.awt.CardLayout;
 import java.awt.EventQueue;

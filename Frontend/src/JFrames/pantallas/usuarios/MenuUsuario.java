@@ -1,4 +1,4 @@
-package com.AppFrontendPantallas.JFrames.pantallas.usuarios;
+package JFrames.pantallas.usuarios;
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -11,15 +11,15 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.border.EmptyBorder;
-import com.AppFrontendPantallas.JFrames.pantallas.administrador.Menuadmin1;
-import com.AppFrontendPantallas.JFrames.pantallas.login.Loginprincipal;
+import JFrames.pantallas.administrador.Menuadmin1;
+import JFrames.pantallas.login.Loginprincipal;
 import javax.swing.JComboBox;
 import com.toedter.calendar.JDateChooser;
 import java.awt.Font;
 import javax.swing.JTextField;
 
 
-	public class MenuUsuario extends JFrame implements ActionListener{
+public class MenuUsuario extends JFrame implements ActionListener{
 
 		/**
 		 * 
