@@ -9,71 +9,123 @@ public class Vuelo implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 229504749680671403L;
-	private int idVuelo;
-	private int idCliente;
-	private int idAerolinea;
-	private Date fechaVenta;
-	private String formaDePago;
 
-	public Vuelo(int idVuelo, int idCliente, int idAerolinea, Date fechaVenta, String formaDePago) {
+	private String id;
+	private String nroVuelo;
+
+	private int cantidadDeAsientos;
+	private int vendidos;
+	private int tiempoHoras;
+
+	private LineaAerea lineaAerea;
+
+	private Aeropuerto aeropuertoDeSalida;
+	private Aeropuerto aeropuertoDeLlegada;
+
+	private Date horaSalida;
+	private Date horaLlegada;
+
+	public Vuelo(String id, String nroVuelo, int cantidadDeAsientos, int vendidos, int tiempoHoras,
+			LineaAerea lineaAerea, Aeropuerto aeropuertoDeSalida, Aeropuerto aeropuertoDeLlegada, Date horaSalida,
+			Date horaLlegada) {
 		super();
-		this.idVuelo = idVuelo;
-		this.idCliente = idCliente;
-		this.idAerolinea = idAerolinea;
-		this.fechaVenta = fechaVenta;
-		this.formaDePago = formaDePago;
+		this.id = id;
+		this.nroVuelo = nroVuelo;
+		this.cantidadDeAsientos = cantidadDeAsientos;
+		this.vendidos = vendidos;
+		this.tiempoHoras = tiempoHoras;
+		this.lineaAerea = lineaAerea;
+		this.aeropuertoDeSalida = aeropuertoDeSalida;
+		this.aeropuertoDeLlegada = aeropuertoDeLlegada;
+		this.horaSalida = horaSalida;
+		this.horaLlegada = horaLlegada;
 	}
-	
+
 	public Vuelo() {
-		super();
 	}
 
-	public int getIdVuelo() {
-		return idVuelo;
+	public String getId() {
+		return id;
 	}
 
-	public void setIdVuelo(int idVuelo) {
-		this.idVuelo = idVuelo;
+	public void setId(String id) {
+		this.id = id;
 	}
 
-	public int getIdCliente() {
-		return idCliente;
+	public String getNroVuelo() {
+		return nroVuelo;
 	}
 
-	public void setIdCliente(int idCliente) {
-		this.idCliente = idCliente;
+	public void setNroVuelo(String nroVuelo) {
+		this.nroVuelo = nroVuelo;
 	}
 
-	public int getIdAerolinea() {
-		return idAerolinea;
+	public int getCantidadDeAsientos() {
+		return cantidadDeAsientos;
 	}
 
-	public void setIdAerolinea(int idAerolinea) {
-		this.idAerolinea = idAerolinea;
+	public void setCantidadDeAsientos(int cantidadDeAsientos) {
+		this.cantidadDeAsientos = cantidadDeAsientos;
 	}
 
-	public Date getFechaVenta() {
-		return fechaVenta;
+	public int getVendidos() {
+		return vendidos;
 	}
 
-	public void setFechaVenta(Date fechaVenta) {
-		this.fechaVenta = fechaVenta;
+	public void setVendidos(int vendidos) {
+		this.vendidos = vendidos;
 	}
 
-	public String getFormaDePago() {
-		return formaDePago;
+	public int getTiempoHoras() {
+		return tiempoHoras;
 	}
 
-	public void setFormaDePago(String formaDePago) {
-		this.formaDePago = formaDePago;
+	public void setTiempoHoras(int tiempoHoras) {
+		this.tiempoHoras = tiempoHoras;
 	}
 
-	@Override
-	public String toString() {
-		return "Vuelo [idVuelo=" + idVuelo + ", idCliente=" + idCliente + ", idAerolinea=" + idAerolinea
-				+ ", fechaVenta=" + fechaVenta + ", formaDePago=" + formaDePago + "]";
+	public LineaAerea getLineaAerea() {
+		return lineaAerea;
 	}
-	
-	
+
+	public void setLineaAerea(LineaAerea lineaAerea) {
+		this.lineaAerea = lineaAerea;
+	}
+
+	public Aeropuerto getAeropuertoDeSalida() {
+		return aeropuertoDeSalida;
+	}
+
+	public void setAeropuertoDeSalida(Aeropuerto aeropuertoDeSalida) {
+		this.aeropuertoDeSalida = aeropuertoDeSalida;
+	}
+
+	public Aeropuerto getAeropuertoDeLlegada() {
+		return aeropuertoDeLlegada;
+	}
+
+	public void setAeropuertoDeLlegada(Aeropuerto aeropuertoDeLlegada) {
+		this.aeropuertoDeLlegada = aeropuertoDeLlegada;
+	}
+
+	public Date getHoraSalida() {
+		return horaSalida;
+	}
+
+	public void setHoraSalida(Date horaSalida) {
+		this.horaSalida = horaSalida;
+	}
+
+	public Date getHoraLlegada() {
+		return horaLlegada;
+	}
+
+	public void setHoraLlegada(Date horaLlegada) {
+		this.horaLlegada = horaLlegada;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 
 }

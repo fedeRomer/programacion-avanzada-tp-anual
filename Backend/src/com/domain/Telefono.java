@@ -6,14 +6,17 @@ public class Telefono implements Serializable{
 
 	private static final long serialVersionUID = 5551214220263138873L;
 
+	private int id;
+	
 	private String laboral;
 
 	private String personal;
 
 	private String celular;
 
-	public Telefono(String laboral, String personal, String celular) {
+	public Telefono(int id, String laboral, String personal, String celular) {
 		super();
+		this.id=id;
 		this.laboral = laboral;
 		this.personal = personal;
 		this.celular = celular;
@@ -21,6 +24,15 @@ public class Telefono implements Serializable{
 	
 	public Telefono() {
 		super();
+	}
+	
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getLaboral() {

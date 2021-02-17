@@ -10,73 +10,73 @@ public class PasajeroFrecuente implements Serializable{
 
 	private int numeroPasajero;
 
-	private String categoria;
+	private LineaAerea lineaAerea;
 
-	private String alianza;
+	private Alianza alianza;
 
 	private String aerolinea;
-	
 
-	public PasajeroFrecuente(int idPasajeroFrecuente, int numeroPasajero, String categoria, String alianza,
+	public PasajeroFrecuente(int idPasajeroFrecuente, int numeroPasajero, LineaAerea lineaAerea, Alianza alianza,
 			String aerolinea) {
 		super();
 		this.idPasajeroFrecuente = idPasajeroFrecuente;
 		this.numeroPasajero = numeroPasajero;
-		this.categoria = categoria;
+		this.lineaAerea = lineaAerea;
 		this.alianza = alianza;
 		this.aerolinea = aerolinea;
 	}
-	
+
 	public PasajeroFrecuente() {
-		super();
 	}
 
 	public int getIdPasajeroFrecuente() {
-		return this.idPasajeroFrecuente;
+		return idPasajeroFrecuente;
 	}
 
-	public void setIdPasajeroFrecuente(int value) {
-		this.idPasajeroFrecuente = value;
+	public void setIdPasajeroFrecuente(int idPasajeroFrecuente) {
+		this.idPasajeroFrecuente = idPasajeroFrecuente;
 	}
 
 	public int getNumeroPasajero() {
-		return this.numeroPasajero;
+		return numeroPasajero;
 	}
 
-	public void setNumeroPasajero(int value) {
-		this.numeroPasajero = value;
+	public void setNumeroPasajero(int numeroPasajero) {
+		this.numeroPasajero = numeroPasajero;
 	}
 
-	public String getCategoria() {
-		return this.categoria;
+	public LineaAerea getLineaAerea() {
+		return lineaAerea;
 	}
 
-	public void setCategoria(String value) {
-		this.categoria = value;
+	public void setLineaAerea(LineaAerea lineaAerea) {
+		this.lineaAerea = lineaAerea;
 	}
 
-	public String getAlianza() {
-		return this.alianza;
+	public Alianza getAlianza() {
+		return alianza;
 	}
 
-	public void setAlianza(String value) {
-		this.alianza = value;
+	public void setAlianza(Alianza alianza) {
+		this.alianza = alianza;
 	}
 
 	public String getAerolinea() {
-		return this.aerolinea;
+		return aerolinea;
 	}
 
-	public void setAerolinea(String value) {
-		this.aerolinea = value;
+	public void setAerolinea(String aerolinea) {
+		this.aerolinea = aerolinea;
 	}
 
-	@Override
-	public String toString() {
-		return "PasajeroFrecuente [idPasajeroFrecuente=" + idPasajeroFrecuente + ", numeroPasajero=" + numeroPasajero
-				+ ", categoria=" + categoria + ", alianza=" + alianza + ", aerolinea=" + aerolinea + "]";
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 	
+	
+	
+	
+
 	
 
 

@@ -11,15 +11,15 @@ public class Direccion implements Serializable {
 
 	private String altura;
 
-	private Object provincia;
+	private Provincia provincia;
 
 	private String ciudad;
 
-	private String pais;
+	private Pais pais;
 
 	private String codigoPostal;
 
-	public Direccion(String calle, String altura, Object provincia, String ciudad, String pais, String codigoPostal) {
+	public Direccion(String calle, String altura, Provincia provincia, String ciudad, Pais pais, String codigoPostal) {
 		super();
 		this.calle = calle;
 		this.altura = altura;
@@ -29,63 +29,61 @@ public class Direccion implements Serializable {
 		this.codigoPostal = codigoPostal;
 	}
 
-	public Direccion() {
-		super();
-	}
+	public Direccion() {}
 
 	public String getCalle() {
-		return this.calle;
+		return calle;
 	}
 
-	public void setCalle(String value) {
-		this.calle = value;
+	public void setCalle(String calle) {
+		this.calle = calle;
 	}
 
 	public String getAltura() {
-		return this.altura;
+		return altura;
 	}
 
-	public void setAltura(String value) {
-		this.altura = value;
+	public void setAltura(String altura) {
+		this.altura = altura;
 	}
 
-	public Object getProvincia() {
-		return this.provincia;
+	public Provincia getProvincia() {
+		return provincia;
 	}
 
-	public void setProvincia(Object value) {
-		this.provincia = value;
+	public void setProvincia(Provincia provincia) {
+		this.provincia = provincia;
 	}
 
 	public String getCiudad() {
-		return this.ciudad;
+		return ciudad;
 	}
 
-	public void setCiudad(String value) {
-		this.ciudad = value;
+	public void setCiudad(String ciudad) {
+		this.ciudad = ciudad;
 	}
 
-	public String getPais() {
-		return this.pais;
+	public Pais getPais() {
+		return pais;
 	}
 
-	public void setPais(String value) {
-		this.pais = value;
+	public void setPais(Pais pais) {
+		this.pais = pais;
 	}
 
 	public String getCodigoPostal() {
-		return this.codigoPostal;
+		return codigoPostal;
 	}
 
-	public void setCodigoPostal(String value) {
-		this.codigoPostal = value;
+	public void setCodigoPostal(String codigoPostal) {
+		this.codigoPostal = codigoPostal;
 	}
 
-	@Override
-	public String toString() {
-		return "Direccion [calle=" + calle + ", altura=" + altura + ", provincia=" + provincia + ", ciudad=" + ciudad
-				+ ", pais=" + pais + ", codigoPostal=" + codigoPostal + "]";
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
+
+	
 
 
 }

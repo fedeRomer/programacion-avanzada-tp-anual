@@ -12,13 +12,16 @@ public class Cliente implements Serializable {
 	private String cuilCuit;
 	private Date fechaNacimiento;
 	private String mail;
-	private Object pasaporte = new Pasaporte();
-	private Object telefono = new Telefono();
-	private Object direccion = new Direccion();
-	private Object pasajeroFrecuente = new PasajeroFrecuente();
-
+	private Pasaporte pasaporte;
+	private Telefono telefono;
+	private Direccion direccion;
+	private PasajeroFrecuente pasajeroFrecuente;
+	
+	
+	public Cliente() {}
+	
 	public Cliente(int idCliente, String nombreCompleto, int dni, String cuilCuit, Date fechaNacimiento, String mail,
-			Object pasaporte, Object telefono, Object direccion, Object pasajeroFrecuente) {
+			Pasaporte pasaporte, Telefono telefono, Direccion direccion, PasajeroFrecuente pasajeroFrecuente) {
 		super();
 		this.idCliente = idCliente;
 		this.nombreCompleto = nombreCompleto;
@@ -32,90 +35,92 @@ public class Cliente implements Serializable {
 		this.pasajeroFrecuente = pasajeroFrecuente;
 	}
 
-	public Cliente() {
-		super();
-
-	}
-
 	public int getIdCliente() {
-		return this.idCliente;
+		return idCliente;
 	}
 
-	public void setIdCliente(int value) {
-		this.idCliente = value;
+	public void setIdCliente(int idCliente) {
+		this.idCliente = idCliente;
 	}
 
 	public String getNombreCompleto() {
-		return this.nombreCompleto;
+		return nombreCompleto;
 	}
 
-	public void setNombreCompleto(String value) {
-		this.nombreCompleto = value;
+	public void setNombreCompleto(String nombreCompleto) {
+		this.nombreCompleto = nombreCompleto;
 	}
 
 	public int getDni() {
-		return this.dni;
+		return dni;
 	}
 
-	public void setDni(int value) {
-		this.dni = value;
+	public void setDni(int dni) {
+		this.dni = dni;
 	}
 
 	public String getCuilCuit() {
-		return this.cuilCuit;
+		return cuilCuit;
 	}
 
-	public void setCuilCuit(String value) {
-		this.cuilCuit = value;
+	public void setCuilCuit(String cuilCuit) {
+		this.cuilCuit = cuilCuit;
 	}
 
 	public Date getFechaNacimiento() {
-		return this.fechaNacimiento;
+		return fechaNacimiento;
 	}
 
-	public void setFechaNacimiento(Date value) {
-		this.fechaNacimiento = value;
+	public void setFechaNacimiento(Date fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
 	}
 
 	public String getMail() {
-		return this.mail;
+		return mail;
 	}
 
-	public void setMail(String value) {
-		this.mail = value;
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
 
-	public Object getPasaporte() {
-		return this.pasaporte;
+	public Pasaporte getPasaporte() {
+		return pasaporte;
 	}
 
-	public void setPasaporte(Object value) {
-		this.pasaporte = value;
+	public void setPasaporte(Pasaporte pasaporte) {
+		this.pasaporte = pasaporte;
 	}
 
-	public Object getTelefono() {
-		return this.telefono;
+	public Telefono getTelefono() {
+		return telefono;
 	}
 
-	public void setTelefono(Object value) {
-		this.telefono = value;
+	public void setTelefono(Telefono telefono) {
+		this.telefono = telefono;
 	}
 
-	public Object getDireccion() {
-		return this.direccion;
+	public Direccion getDireccion() {
+		return direccion;
 	}
 
-	public void setDireccion(Object value) {
-		this.direccion = value;
+	public void setDireccion(Direccion direccion) {
+		this.direccion = direccion;
 	}
 
-	@Override
-	public String toString() {
-		return "Cliente [idCliente=" + idCliente + ", nombreCompleto=" + nombreCompleto + ", dni=" + dni + ", cuil/cuit="
-				+ cuilCuit + ", fechaNacimiento=" + fechaNacimiento + ", mail=" + mail + ", pasaporte=" + pasaporte
-				+ ", telefono=" + telefono + ", direccion=" + direccion + ", pasajeroFrecuente=" + pasajeroFrecuente
-				+ "]";
+	public PasajeroFrecuente getPasajeroFrecuente() {
+		return pasajeroFrecuente;
 	}
+
+	public void setPasajeroFrecuente(PasajeroFrecuente pasajeroFrecuente) {
+		this.pasajeroFrecuente = pasajeroFrecuente;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	
+	
+	
 	
 	
 

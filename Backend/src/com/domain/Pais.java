@@ -11,38 +11,37 @@ public class Pais implements Serializable {
 
 	private String nombre;
 
-	private String provincia;
+	private int id;
 
-	public Pais(String nombre, String provincia) {
+	public Pais(String nombre, int id) {
 		super();
 		this.nombre = nombre;
-		this.provincia = provincia;
+		this.id = id;
 	}
-	
+
 	public Pais() {
-		super();
 	}
 
 	public String getNombre() {
-		return this.nombre;
+		return nombre;
 	}
 
-	public void setNombre(String value) {
-		this.nombre = value;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
-	public String getProvincia() {
-		return this.provincia;
+	public int getId() {
+		return id;
 	}
 
-	public void setProvincia(String value) {
-		this.provincia = value;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	@Override
-	public String toString() {
-		return "Pais [nombre=" + nombre + ", provincia=" + provincia + "]";
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
+	
 	
 	
 }

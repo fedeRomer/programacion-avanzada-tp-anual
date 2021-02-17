@@ -6,76 +6,87 @@ import java.util.Date;
 public class Venta implements Serializable {
 
 	private static final long serialVersionUID = 1587009634072513422L;
+
 	private int idVenta;
-	private Object cliente = new Cliente();
 
-	private Object vuelo = new Vuelo();
+	private Cliente cliente;
 
-	private Object aerolinea = new Aerolinea();
+	private Vuelo vuelo;
+
+	private LineaAerea lineaAerea;
 
 	private Date fechaDeVenta;
 
 	private String metodoDePago;
 
-	public Venta(int idVenta, Object cliente, Object vuelo, Object aerolinea, Date fechaDeVenta, String metodoDePago) {
+	public Venta(int idVenta, Cliente cliente, Vuelo vuelo, LineaAerea lineaAerea, Date fechaDeVenta,
+			String metodoDePago) {
 		super();
 		this.idVenta = idVenta;
 		this.cliente = cliente;
 		this.vuelo = vuelo;
-		this.aerolinea = aerolinea;
+		this.lineaAerea = lineaAerea;
 		this.fechaDeVenta = fechaDeVenta;
 		this.metodoDePago = metodoDePago;
 	}
-	
+
 	public Venta() {
-		super();
 	}
 
-	public Object getCliente() {
-		return this.cliente;
+	public int getIdVenta() {
+		return idVenta;
 	}
 
-	public void setCliente(Object value) {
-		this.cliente = value;
+	public void setIdVenta(int idVenta) {
+		this.idVenta = idVenta;
 	}
 
-	public Object getVuelo() {
-		return this.vuelo;
+	public Cliente getCliente() {
+		return cliente;
 	}
 
-	public void setVuelo(Object value) {
-		this.vuelo = value;
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
 	}
 
-	public Object getAerolinea() {
-		return this.aerolinea;
+	public Vuelo getVuelo() {
+		return vuelo;
 	}
 
-	public void setAerolinea(Object value) {
-		this.aerolinea = value;
+	public void setVuelo(Vuelo vuelo) {
+		this.vuelo = vuelo;
+	}
+
+	public LineaAerea getLineaAerea() {
+		return lineaAerea;
+	}
+
+	public void setLineaAerea(LineaAerea lineaAerea) {
+		this.lineaAerea = lineaAerea;
 	}
 
 	public Date getFechaDeVenta() {
-		return this.fechaDeVenta;
+		return fechaDeVenta;
 	}
 
-	public void setFechaDeVenta(Date value) {
-		this.fechaDeVenta = value;
+	public void setFechaDeVenta(Date fechaDeVenta) {
+		this.fechaDeVenta = fechaDeVenta;
 	}
 
 	public String getMetodoDePago() {
-		return this.metodoDePago;
+		return metodoDePago;
 	}
 
-	public void setMetodoDePago(String value) {
-		this.metodoDePago = value;
-	}
 
-	@Override
-	public String toString() {
-		return "Venta [idVenta=" + idVenta + ", cliente=" + cliente + ", vuelo=" + vuelo + ", aerolinea=" + aerolinea
-				+ ", fechaDeVenta=" + fechaDeVenta + ", metodoDePago=" + metodoDePago + "]";
+	public void setMetodoDePagoEfectivo() {
+		this.metodoDePago = "Efectivo";
 	}
 	
+	public void setMetodoDePagoTarjetaDeb() {
+		this.metodoDePago = "Tarjeta Debito";
+	}
 	
+	public void setMetodoDePagoTarjetaCred() {
+		this.metodoDePago = "Tarjeta Credito";
+	}
 }

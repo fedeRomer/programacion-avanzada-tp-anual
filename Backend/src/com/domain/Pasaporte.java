@@ -14,7 +14,7 @@ public class Pasaporte implements Serializable {
 
 	private int codigoPasaporte;
 
-	private String pais;
+	private Pais pais;
 
 	private String autoridadEmision;
 
@@ -22,7 +22,7 @@ public class Pasaporte implements Serializable {
 
 	private Date fechaVencimiento;
 
-	public Pasaporte(int idPasaporte, int codigoPasaporte, String pais, String autoridadEmision, Date fechaEmision,
+	public Pasaporte(int idPasaporte, int codigoPasaporte, Pais pais, String autoridadEmision, Date fechaEmision,
 			Date fechaVencimiento) {
 		super();
 		this.idPasaporte = idPasaporte;
@@ -53,11 +53,11 @@ public class Pasaporte implements Serializable {
 		this.codigoPasaporte = value;
 	}
 
-	public String getPais() {
+	public Pais getPais() {
 		return this.pais;
 	}
 
-	public void setPais(String value) {
+	public void setPais(Pais value) {
 		this.pais = value;
 	}
 

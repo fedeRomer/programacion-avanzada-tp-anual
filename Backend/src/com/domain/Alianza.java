@@ -1,13 +1,15 @@
 package com.domain;
 
 public enum Alianza {
-    ALIANZA1("Oneworld"),
-    ALIANZA2("SkyTeam"),
-    ALIANZA3("Star Alliance");
+    ONEWORLD(1,"Oneworld"),
+    SKYTEAM(2,"SkyTeam"),
+    STARALLIANCE(3,"Star Alliance");
 
     public final String alianza;
-
-    private Alianza (String alianza){
+    public final int id;
+    
+    private Alianza (int id, String alianza){
+    	this.id = id;
         this.alianza = alianza;
     }
 }
