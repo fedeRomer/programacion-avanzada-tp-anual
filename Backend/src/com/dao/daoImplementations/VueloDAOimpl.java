@@ -5,11 +5,11 @@ import java.sql.PreparedStatement;
 import java.sql.Statement;
 import java.util.List;
 
-import com.dao.daoInterfaces.VuelosDAO;
+import com.dao.daoInterfaces.VueloDAO;
 import com.domain.Vuelo;
 import com.mysql.cj.jdbc.CallableStatement;
 
-public class VuelosDAOimpl implements VuelosDAO {
+public class VueloDAOimpl implements VueloDAO {
 	private PreparedStatement preparedStatement;
 	private CallableStatement callableStatement;
 	private String query;
@@ -38,7 +38,6 @@ public class VuelosDAOimpl implements VuelosDAO {
 
 	@Override
 	public Vuelo updateVuelo(Vuelo vuelo) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
