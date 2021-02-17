@@ -18,10 +18,10 @@ public class Tests {
 	@Test
 	public void testQuery() throws ClassNotFoundException, SQLException {
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/aerolineas?" + "user=admin&password=eCMJjbmc");
+		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/aerolineas?" + "user=root&password=1234");
 		String query = "SELECT * FROM aerolineas.cliente";
-
-		PreparedStatement p = conn.prepareStatement(query);
+		String query2 ="SELECT * FROM sakila.actor";
+		PreparedStatement p = conn.prepareStatement(query2);
 		ResultSet resultSet;
 		List<Object> paramList = new ArrayList<Object>();
 /*
