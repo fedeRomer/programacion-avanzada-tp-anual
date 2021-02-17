@@ -7,10 +7,10 @@ import com.exceptions.NoSuchIdException;
 public interface ClienteDAO {
 	
 	    public void addCliente(Cliente cliente);
-	    public Cliente updateCliente(Cliente usuario);
-	    public void deleteCliente(int idUsuario);
+	    public Cliente updateCliente(Cliente cliente);
+	    public void deleteCliente(int id);
 	    public List<Cliente> findAllCliente();
-	    public Cliente getCliente(int idUsuario) throws NoSuchIdException;
+	    public Cliente getCliente(int id) throws NoSuchIdException;
 	    
 
 }
