@@ -1,4 +1,4 @@
-package com.mvc.controller;
+package JFrames.controller;
 
 public class LoginController {
 
