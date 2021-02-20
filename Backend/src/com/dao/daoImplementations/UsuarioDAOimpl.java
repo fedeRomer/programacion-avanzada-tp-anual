@@ -9,8 +9,9 @@ import com.exceptions.NoSuchIdException;
 public class UsuarioDAOimpl implements UsuarioDAO{
 
 	@Override
-	public void addUsuario(Usuario Usuario) {
+	public Boolean addUsuario(Usuario Usuario) {
 		// TODO Auto-generated method stub
+		return null;
 		
 	}
 
@@ -21,9 +22,9 @@ public class UsuarioDAOimpl implements UsuarioDAO{
 	}
 
 	@Override
-	public void deleteUsuario(int id) {
+	public Boolean deleteUsuario(int id) {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
 
 	@Override
@@ -37,5 +38,12 @@ public class UsuarioDAOimpl implements UsuarioDAO{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public Usuario getUsuario(String user, String password) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }
