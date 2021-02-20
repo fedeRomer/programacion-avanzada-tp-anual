@@ -126,7 +126,7 @@ public class Loginprincipal extends JFrame implements ActionListener {
 		passhelper = ingresopassword.getText();
 		
 		if("Registrarse".equals(e.getActionCommand())) {
-			Registro registro = new Registro();
+			RegistroUsuario registro = new RegistroUsuario();
 			registro.setVisible(true);
 			this.dispose();
 		}
