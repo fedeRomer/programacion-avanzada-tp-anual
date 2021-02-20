@@ -17,6 +17,7 @@ public class MySQL {
 
 	public MySQL() throws IOException {
 		//TODO: reemplazar por datos de nuestra base
+		//TODO: traer datos desde properties
 		  this.driver = "com.mysql.jdbc.Driver"; 
 		  this.url = "jdbc:mysql://localhost/testdb"; 
 		  this.username = "root"; 
