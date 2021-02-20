@@ -56,10 +56,7 @@ public class ClienteDAOimpl implements ClienteDAO {
 					tempBo.setCuilCuit(rs.getString("cuil"));
 					tempBo.setFechaNacimiento(rs.getDate("fecha_nacimiento"));
 					tempBo.setMail(rs.getString("email"));
-					/*
-					 * agregar Pasaporte pasaporte en pojo cliente
-					 * aca realizar tempBo.setPasaporte.setIdpasaporte(rs.getint
-					 */
+					  
 					clientes.add(tempBo);
 				}
 				System.out.println("\n");
