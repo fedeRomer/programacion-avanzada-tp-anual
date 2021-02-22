@@ -76,7 +76,10 @@ public class Venta implements Serializable {
 	public String getMetodoDePago() {
 		return metodoDePago;
 	}
-
+	
+	public void setMetodoDePago(String metodoDePago) {
+		this.metodoDePago = metodoDePago;
+	}
 
 	public void setMetodoDePagoEfectivo() {
 		this.metodoDePago = "Efectivo";
