@@ -10,6 +10,7 @@ import com.domain.Vuelo;
 import com.mysql.cj.jdbc.CallableStatement;
 
 public class VueloDAOimpl implements VueloDAO {
+	
 	private PreparedStatement preparedStatement;
 	private CallableStatement callableStatement;
 	private String query;
@@ -17,12 +18,14 @@ public class VueloDAOimpl implements VueloDAO {
 	private Statement statement;
 
 	@Override
-	public void addVuelo(Vuelo vuelo) {
+	public Boolean addVuelo(Vuelo vuelo) {
+		return null;
 
 	}
 
 	@Override
-	public void deleteVuelo(int idVuelo) {
+	public Boolean deleteVuelo(int idVuelo) {
+		return null;
 
 	}
 
@@ -37,7 +40,7 @@ public class VueloDAOimpl implements VueloDAO {
 	}
 
 	@Override
-	public Vuelo updateVuelo(Vuelo vuelo) {
+	public Boolean updateVuelo(Vuelo vuelo) {
 		return null;
 	}
 
