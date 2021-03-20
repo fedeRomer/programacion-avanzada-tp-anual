@@ -1,12 +1,21 @@
 package com.dao.daoImplementations;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
 import java.util.List;
 
 import com.dao.daoInterfaces.ProvinciaDAO;
 import com.domain.Provincia;
 import com.exceptions.NoSuchIdException;
+import com.mysql.cj.jdbc.CallableStatement;
 
 public class ProvinciaDAOimpl implements ProvinciaDAO{
+	private PreparedStatement preparedStatement;
+	private CallableStatement callableStatement;
+	private String query;
+	private Connection connection;
+	private Statement statement;
 
 	@Override
 	public void addProvincia(Provincia Provincia) {

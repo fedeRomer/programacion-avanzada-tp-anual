@@ -35,7 +35,7 @@ public class VentaDAOimpl implements VentaDAO {
 				+ "VALUES (?,?,?,?,?)";
 		preparedStatement = connection.prepareStatement(query);
 		preparedStatement.setDate(1, (Date) venta.getFechaDeVenta());
-		preparedStatement.setString(2, venta.getMetodoDePago());
+		preparedStatement.setString(2, venta.getFormaDePago().getValue());
 		preparedStatement.setString(3, venta.getVuelo().getId());
 		preparedStatement.setInt(4, venta.getCliente().getIdCliente());
 		preparedStatement.setString(5, venta.getLineaAerea().getAerolinea());
@@ -59,7 +59,7 @@ public class VentaDAOimpl implements VentaDAO {
 		query = "UPDATE VENTA SET fecha_venta=?, metodo_pago=?, id_vuelo=?, id_cliente=?, id_aerolinea=?";
 		preparedStatement = connection.prepareStatement(query);
 		preparedStatement.setDate(1, (Date) venta.getFechaDeVenta());
-		preparedStatement.setString(2, venta.getMetodoDePago());
+		preparedStatement.setString(2, venta.getFormaDePago().getValue());
 		preparedStatement.setString(3, venta.getVuelo().getId());
 		preparedStatement.setInt(4, venta.getCliente().getIdCliente());
 		preparedStatement.setString(5, venta.getLineaAerea().getAerolinea());
@@ -112,7 +112,7 @@ public class VentaDAOimpl implements VentaDAO {
 
 			venta.setIdVenta(resultSet.getInt(1));
 			venta.setFechaDeVenta(resultSet.getDate(2));
-			venta.setMetodoDePago(resultSet.getString(3));
+			venta.setFormaDePago(resultSet.getString(3));
 
 			cliente.setIdCliente(resultSet.getInt(4));
 			vuelo.setId(resultSet.getString(5));
@@ -144,7 +144,7 @@ public class VentaDAOimpl implements VentaDAO {
 
 			venta.setIdVenta(set.getInt(1));
 			venta.setFechaDeVenta(set.getDate(2));
-			venta.setMetodoDePago(set.getString(3));
+			venta.setFormaDePago(set.getString(3));
 
 			cliente.setIdCliente(set.getInt(4));
 			vuelo.setId(set.getString(5));

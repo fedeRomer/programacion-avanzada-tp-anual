@@ -17,17 +17,37 @@ public class Venta implements Serializable {
 
 	private Date fechaDeVenta;
 
-	private String metodoDePago;
-
+	private FormaDePago formaDePago;
+	
+	/**
+	 * constructor para generar la venta
+	 * 
+	 * @param Cliente, Vuelo, Linea Aerea, Fecha de venta, Metodo de pago
+	 */
+	public Venta(Cliente cliente, Vuelo vuelo, LineaAerea lineaAerea, Date fechaDeVenta,
+			FormaDePago formaDePago) {
+		super();
+		this.cliente = cliente;
+		this.vuelo = vuelo;
+		this.lineaAerea = lineaAerea;
+		this.fechaDeVenta = fechaDeVenta;
+		this.formaDePago = formaDePago;
+	}
+	
+	/**
+	 * constructor para instanciar la venta despues de ser generada
+	 * 
+	 * @param id venta, Cliente, Vuelo, Linea Aerea, Fecha de venta, Metodo de pago
+	 */
 	public Venta(int idVenta, Cliente cliente, Vuelo vuelo, LineaAerea lineaAerea, Date fechaDeVenta,
-			String metodoDePago) {
+			FormaDePago formaDePago) {
 		super();
 		this.idVenta = idVenta;
 		this.cliente = cliente;
 		this.vuelo = vuelo;
 		this.lineaAerea = lineaAerea;
 		this.fechaDeVenta = fechaDeVenta;
-		this.metodoDePago = metodoDePago;
+		this.formaDePago = formaDePago;
 	}
 
 	public Venta() {
@@ -73,23 +93,13 @@ public class Venta implements Serializable {
 		this.fechaDeVenta = fechaDeVenta;
 	}
 
-	public String getMetodoDePago() {
-		return metodoDePago;
-	}
-	
-	public void setMetodoDePago(String metodoDePago) {
-		this.metodoDePago = metodoDePago;
+	public FormaDePago getFormaDePago() {
+		return formaDePago;
 	}
 
-	public void setMetodoDePagoEfectivo() {
-		this.metodoDePago = "Efectivo";
+	public void setFormaDePago(String formaDePago) {
+		this.formaDePago = FormaDePago.get(formaDePago);	
 	}
+
 	
-	public void setMetodoDePagoTarjetaDeb() {
-		this.metodoDePago = "Tarjeta Debito";
-	}
-	
-	public void setMetodoDePagoTarjetaCred() {
-		this.metodoDePago = "Tarjeta Credito";
-	}
 }

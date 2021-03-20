@@ -124,8 +124,12 @@ public class Vuelo implements Serializable {
 		this.horaLlegada = horaLlegada;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
+	public void registrarVenta() {
+		vendidos++;
+	}
+	
+	public int getDisponibles() {
+		return cantidadDeAsientos - vendidos;
 	}
 
 }
