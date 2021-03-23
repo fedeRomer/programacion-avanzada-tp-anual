@@ -18,19 +18,21 @@ public class LineaAereaDAOimpl implements LineaAereaDAO{
 	private Statement statement;
 
 	@Override
-	public void addLineaAerea(LineaAerea lineaAerea) {
+	public Boolean addLineaAerea(LineaAerea lineaAerea) {
+		return null;
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public LineaAerea updateLineaAerea(LineaAerea lineaAerea) {
+	public Boolean updateLineaAerea(LineaAerea lineaAerea) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void deleteLineaAerea(int id) {
+	public Boolean deleteLineaAerea(int id) {
+		return null;
 		// TODO Auto-generated method stub
 		
 	}

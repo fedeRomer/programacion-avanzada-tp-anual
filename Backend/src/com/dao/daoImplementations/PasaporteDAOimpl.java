@@ -18,19 +18,21 @@ public class PasaporteDAOimpl implements PasaporteDAO{
 	private Statement statement;
 
 	@Override
-	public void addPasaporte(Pasaporte Pasaporte) {
+	public Boolean addPasaporte(Pasaporte Pasaporte) {
+		return null;
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public Pasaporte updatePasaporte(Pasaporte Pasaporte) {
+	public Boolean updatePasaporte(Pasaporte Pasaporte) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void deletePasaporte(int id) {
+	public Boolean deletePasaporte(int id) {
+		return null;
 		// TODO Auto-generated method stub
 		
 	}

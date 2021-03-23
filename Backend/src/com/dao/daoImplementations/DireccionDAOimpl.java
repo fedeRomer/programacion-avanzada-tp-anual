@@ -18,19 +18,21 @@ public class DireccionDAOimpl implements DireccionDAO{
 	private Statement statement;
 
 	@Override
-	public void addDireccion(Direccion direccion) {
+	public Boolean addDireccion(Direccion direccion) {
+		return null;
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public Direccion updateDireccion(Direccion direccion) {
+	public Boolean updateDireccion(Direccion direccion) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void deleteDireccion(int id) {
+	public Boolean deleteDireccion(int id) {
+		return null;
 		// TODO Auto-generated method stub
 		
 	}

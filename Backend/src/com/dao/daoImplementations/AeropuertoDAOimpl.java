@@ -18,19 +18,21 @@ public class AeropuertoDAOimpl implements AeropuertoDAO {
 	private Statement statement;
 
 	@Override
-	public void addAeropuerto(Aeropuerto aeropuerto) {
+	public Boolean addAeropuerto(Aeropuerto aeropuerto) {
+		return null;
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public Aeropuerto updateAeropuerto(Aeropuerto aeropuerto) {
+	public Boolean updateAeropuerto(Aeropuerto aeropuerto) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void deleteAeropuerto(int id) {
+	public Boolean deleteAeropuerto(int id) {
+		return null;
 		// TODO Auto-generated method stub
 		
 	}

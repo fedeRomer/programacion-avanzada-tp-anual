@@ -18,21 +18,18 @@ public class ProvinciaDAOimpl implements ProvinciaDAO{
 	private Statement statement;
 
 	@Override
-	public void addProvincia(Provincia Provincia) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public Provincia updateProvincia(Provincia Provincia) {
-		// TODO Auto-generated method stub
+	public Boolean addProvincia(Provincia Provincia) {
 		return null;
 	}
 
 	@Override
-	public void deleteProvincia(int id) {
-		// TODO Auto-generated method stub
-		
+	public Boolean updateProvincia(Provincia Provincia) {
+		return null;
+	}
+
+	@Override
+	public Boolean deleteProvincia(int id) {
+		return null;
 	}
 
 	@Override
@@ -43,7 +40,6 @@ public class ProvinciaDAOimpl implements ProvinciaDAO{
 
 	@Override
 	public Provincia getProvincia(int id) throws NoSuchIdException {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
