@@ -21,7 +21,7 @@ public class ClienteDAOimpl implements ClienteDAO {
 	private Connection connection;
 	private Statement statement;
 	@Override
-	public void addCliente(Cliente cliente) {
+	public Boolean addCliente(Cliente cliente) {
 		try {
 			String query = "insert into...T";
 			ThrowQueryByString t = new ThrowQueryByString();
@@ -29,10 +29,12 @@ public class ClienteDAOimpl implements ClienteDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		return null;
 	}
 
 	@Override
-	public void deleteCliente(int idUsuario) {
+	public Boolean deleteCliente(int idUsuario) {
+		return null;
 		// TODO Auto-generated method stub
 
 	}
@@ -76,7 +78,7 @@ public class ClienteDAOimpl implements ClienteDAO {
 	}
 
 	@Override
-	public Cliente updateCliente(Cliente usuario) {
+	public Boolean updateCliente(Cliente usuario) {
 		// TODO Auto-generated method stub
 		return null;
 	}

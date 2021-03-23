@@ -18,19 +18,21 @@ public class PasajeroFrecuenteDAOimpl implements PasajeroFrecuenteDAO{
 	private Statement statement;
 
 	@Override
-	public void addPasajeroFrecuente(PasajeroFrecuente pasajeroFrecuente) {
+	public Boolean addPasajeroFrecuente(PasajeroFrecuente pasajeroFrecuente) {
+		return null;
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public PasajeroFrecuente updatePasajeroFrecuente(PasajeroFrecuente pasajeroFrecuente) {
+	public Boolean updatePasajeroFrecuente(PasajeroFrecuente pasajeroFrecuente) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void deletePasajeroFrecuente(int id) {
+	public Boolean deletePasajeroFrecuente(int id) {
+		return null;
 		// TODO Auto-generated method stub
 		
 	}

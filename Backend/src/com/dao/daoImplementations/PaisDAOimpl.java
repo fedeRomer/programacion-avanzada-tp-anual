@@ -18,19 +18,21 @@ public class PaisDAOimpl implements PaisDAO{
 	private Statement statement;
 
 	@Override
-	public void addPais(Pais pais) {
+	public Boolean addPais(Pais pais) {
+		return null;
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public Pais updatePais(Pais pais) {
+	public Boolean updatePais(Pais pais) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void deletePais(int id) {
+	public Boolean deletePais(int id) {
+		return null;
 		// TODO Auto-generated method stub
 		
 	}
