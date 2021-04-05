@@ -46,9 +46,10 @@ public class ProvinciasDAOimpl implements ProvinciaDAO{
 	public Boolean updateProvincia(Provincia provincia) throws SQLException, IOException {
 		MySQL mySQL = new MySQL();
 		this.connection = mySQL.getConnection();
-		query = "UPDATE PROVINCIA SET nombre = ?";
+		query = "UPDATE PROVINCIA SET nombre = ? WHERE id=?";
 		preparedStatement = connection.prepareStatement(query);
 		preparedStatement.setString(1, provincia.getNombre());
+		preparedStatement.setInt(2, provincia.getId());
 
 		int resultSet = preparedStatement.executeUpdate();
 		if (resultSet == 1) {

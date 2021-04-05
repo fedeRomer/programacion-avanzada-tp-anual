@@ -45,11 +45,12 @@ public class UsuarioDAOimpl implements UsuarioDAO {
 	public Boolean updateUsuario(Usuario usuario) throws SQLException, IOException {
 		MySQL mySQL = new MySQL();
 		this.connection = mySQL.getConnection();
-		query = "UPDATE USUARIO SET username=?, password=?, tipo_usuario=?";
+		query = "UPDATE USUARIO SET username=?, password=?, tipo_usuario=? WHERE id=?";
 		preparedStatement = connection.prepareStatement(query);
 		preparedStatement.setString(1, usuario.getUsername());
 		preparedStatement.setString(2, usuario.getPassword());
 		preparedStatement.setString(3, usuario.getTipoUser());
+		preparedStatement.setInt(4, usuario.getId());
 		
 		int resultSet = preparedStatement.executeUpdate();
 		if (resultSet == 1) {
