@@ -6,6 +6,8 @@ import java.util.Date;
 public class Aeropuerto implements Serializable {
 
 	private static final long serialVersionUID = 4489416593723971011L;
+	
+	private int id;
 
 	private String identificacion;
 
@@ -15,8 +17,9 @@ public class Aeropuerto implements Serializable {
 
 	private Pais pais;
 
-	public Aeropuerto(String identificacion, String ciudad, Provincia provincia, Pais pais) {
+	public Aeropuerto(int id, String identificacion, String ciudad, Provincia provincia, Pais pais) {
 		super();
+		this.id = id;
 		this.identificacion = identificacion;
 		this.ciudad = ciudad;
 		this.provincia = provincia;
@@ -56,6 +59,15 @@ public class Aeropuerto implements Serializable {
 
 	public void setPais(Pais pais) {
 		this.pais = pais;
+	}
+	
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public static long getSerialversionuid() {
