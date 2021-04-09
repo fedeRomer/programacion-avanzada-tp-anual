@@ -15,7 +15,7 @@ import com.exceptions.NoSuchIdException;
 import com.mysql.cj.jdbc.CallableStatement;
 import com.utils.ConexionDB.MySQL;
 
-public class ProvinciasDAOimpl implements ProvinciaDAO{
+public class ProvinciaDAOimpl implements ProvinciaDAO{
 	private PreparedStatement preparedStatement;
 	private CallableStatement callableStatement;
 	private String query;

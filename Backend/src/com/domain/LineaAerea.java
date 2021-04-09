@@ -27,11 +27,11 @@ public class LineaAerea implements Serializable{
 	public LineaAerea() {
 	}
 
-	public Vuelo searchFlight(String id) {
+	public Vuelo searchFlight(int id) {
 		Vuelo vuelo = null;
 
 		for (int i = 0; i < arrVuelos.size(); i++) {
-			if (arrVuelos.get(i).getId().equalsIgnoreCase(id)) {
+			if (arrVuelos.get(i).getId() == id) {
 				vuelo = arrVuelos.get(i);
 				return vuelo;
 			}
@@ -41,7 +41,7 @@ public class LineaAerea implements Serializable{
 
 	}
 
-	public Boolean releaseFlight(String id) throws Exception {
+	public Boolean releaseFlight(int id) throws Exception {
 		Vuelo vuelo = searchFlight(id);
 
 		if (vuelo != null) {

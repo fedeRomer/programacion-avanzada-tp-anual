@@ -19,11 +19,12 @@ public class VueloBLL {
 
 	}
 
+	@SuppressWarnings("null")
 	public int matchVentaWithFlight(List<Venta> venta, Vuelo vuelo) {
 
 		for (int i = 0; i < venta.size(); i++) {
 
-			if (venta.get(i).getVuelo().getId().equalsIgnoreCase(vuelo.getId())) {
+			if (venta.get(i).getVuelo().getId() == vuelo.getId()) {
 				return i;
 			}
 		}

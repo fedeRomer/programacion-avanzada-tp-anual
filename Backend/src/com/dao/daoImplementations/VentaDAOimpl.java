@@ -36,7 +36,7 @@ public class VentaDAOimpl implements VentaDAO {
 		preparedStatement = connection.prepareStatement(query);
 		preparedStatement.setDate(1, (Date) venta.getFechaDeVenta());
 		preparedStatement.setString(2, venta.getFormaDePago().getValue());
-		preparedStatement.setString(3, venta.getVuelo().getId());
+		preparedStatement.setInt(3, venta.getVuelo().getId());
 		preparedStatement.setInt(4, venta.getCliente().getIdCliente());
 		preparedStatement.setString(5, venta.getLineaAerea().getAerolinea());
 
@@ -60,7 +60,7 @@ public class VentaDAOimpl implements VentaDAO {
 		preparedStatement = connection.prepareStatement(query);
 		preparedStatement.setDate(1, (Date) venta.getFechaDeVenta());
 		preparedStatement.setString(2, venta.getFormaDePago().getValue());
-		preparedStatement.setString(3, venta.getVuelo().getId());
+		preparedStatement.setInt(3, venta.getVuelo().getId());
 		preparedStatement.setInt(4, venta.getCliente().getIdCliente());
 		preparedStatement.setString(5, venta.getLineaAerea().getAerolinea());
 		preparedStatement.setInt(6, venta.getIdVenta());
@@ -115,7 +115,7 @@ public class VentaDAOimpl implements VentaDAO {
 			venta.setFormaDePago(resultSet.getString(3));
 
 			cliente.setIdCliente(resultSet.getInt(4));
-			vuelo.setId(resultSet.getString(5));
+			vuelo.setId(resultSet.getInt(5));
 			lineaAerea.setId(resultSet.getInt(6));
 
 			venta.setCliente(cliente);
@@ -147,7 +147,7 @@ public class VentaDAOimpl implements VentaDAO {
 			venta.setFormaDePago(set.getString(3));
 
 			cliente.setIdCliente(set.getInt(4));
-			vuelo.setId(set.getString(5));
+			vuelo.setId(set.getInt(5));
 			lineaAerea.setId(set.getInt(6));
 
 			venta.setCliente(cliente);

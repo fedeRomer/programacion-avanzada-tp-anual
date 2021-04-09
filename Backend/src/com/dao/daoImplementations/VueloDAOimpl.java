@@ -146,6 +146,11 @@ public class VueloDAOimpl implements VueloDAO {
 			vuelo.setHoraLlegada(resultSet.getDate("hora_llegada"));
 			vuelo.setHoraSalida(resultSet.getDate("hora_salida"));
 		}
+		
+		resultSet.close();
+		preparedStatement.close();
+		connection.close();
+		
 		return vuelo;
 	}
 
