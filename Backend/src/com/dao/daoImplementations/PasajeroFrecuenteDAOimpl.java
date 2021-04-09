@@ -28,7 +28,7 @@ public class PasajeroFrecuenteDAOimpl implements PasajeroFrecuenteDAO {
 	public Boolean addPasajeroFrecuente(PasajeroFrecuente pasajeroFrecuente) throws SQLException, IOException {
 		MySQL mySQL = new MySQL();
 		this.connection = mySQL.getConnection();
-		query = "INSERT INTO PASAJERO_FRECUENTE (numeroPasajero, lineaAerea, alianza, aerolinea) " + "VALUES (?,?,?,?";
+		query = "INSERT INTO PASAJERO_FRECUENTE (numeroPasajero, lineaAerea, alianza, aerolinea) " + "VALUES (?,?,?,?)";
 		preparedStatement = connection.prepareStatement(query);
 		preparedStatement.setInt(1, pasajeroFrecuente.getNumeroPasajero());
 		preparedStatement.setInt(2, pasajeroFrecuente.getLineaAerea().getId());
