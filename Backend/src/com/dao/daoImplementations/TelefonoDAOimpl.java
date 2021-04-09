@@ -48,12 +48,12 @@ public class TelefonoDAOimpl implements TelefonoDAO{
 	public Boolean updateTelefono(Telefono telefono) throws SQLException, IOException {
 		MySQL mySQL = new MySQL();
 		this.connection = mySQL.getConnection();
-		query ="UPDATE TELEFONO SET laboral=?, personal=?, celular=?";
+		query ="UPDATE TELEFONO SET laboral=?, personal=?, celular=? WHERE id=?";
 		preparedStatement = connection.prepareStatement(query);
 		preparedStatement.setString(1, telefono.getLaboral());
 		preparedStatement.setString(2, telefono.getPersonal());
 		preparedStatement.setString(3, telefono.getCelular());
-
+		preparedStatement.setInt(4, telefono.getId());
 		int resultSet = preparedStatement.executeUpdate();
 		if (resultSet == 1) {
 			preparedStatement.close();
